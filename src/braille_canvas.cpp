@@ -28,8 +28,6 @@ BrailleCanvas::BrailleCanvas(QWidget *parent) : QWidget(parent), isDrawing(false
     } else {
         qDebug() << "Failed to load font";
     }
-   
-    zoomFactor = 1;
 
     graphicsScene = new QGraphicsScene(this);
     graphicsView = new BrailleView(graphicsScene, this);
@@ -56,27 +54,19 @@ void BrailleCanvas::applyZoom(qreal factor, const QPoint &cursorPos){
     QPointF newScrollPos = cursorScenePos - (cursorScenePos - graphicsView->mapFromScene(cursorScenePos) / factor);
 }
 
-//void BrailleCanvas::updateGrid(){
-//    QLayoutItem *child;
-//    while ((child = gridLayout->takeAt(0)) != nullptr){
-//        delete child->widget();
-//        delete child;
-//    }
-//    createGrid();
-//}
 
 void BrailleCanvas::mousePressEvent(QMouseEvent *event){
     if (event->button() == Qt::LeftButton){
         isDrawing = true;
         QPointF scenePos = graphicsView->mapToScene(event->pos());
-        drawBrailleAt(QPoint(static_cast<int>(scenePos.x()), static_cast<int>(scenePos.y())));
+        drawBrailleAt(scenePos);
     }
 }
 
 void BrailleCanvas::mouseMoveEvent(QMouseEvent *event){
     if (isDrawing){
         QPointF scenePos = graphicsView->mapToScene(event->pos());
-        drawBrailleAt(QPoint(static_cast<int>(scenePos.x()), static_cast<int>(scenePos.y())));
+        drawBrailleAt(scenePos);
     }
 }
 
@@ -88,8 +78,8 @@ void BrailleCanvas::mouseReleaseEvent(QMouseEvent *event){
 
 void BrailleCanvas::createGrid(){
     QFontMetrics fm(brailleFont);
-    int font_width = fm.horizontalAdvance(QChar(0x2800)) * zoomFactor;
-    int font_height = fm.height() * zoomFactor;
+    int font_width = fm.horizontalAdvance(QChar(0x2800));
+    int font_height = fm.height();
 
     cols = width() / font_width;
     rows = height() / font_height;
@@ -100,7 +90,7 @@ void BrailleCanvas::createGrid(){
             BrailleTextBox *box = qobject_cast<BrailleTextBox*>(proxy->widget());
             box->setFixedSize(font_width, font_height);
             box->setFont(brailleFont);
-            box->setStyleSheet(QString("font-size: %1px").arg(12 * zoomFactor));
+            box->setStyleSheet(QString("font-size: %1px").arg(12));
 
             proxy->setGeometry(QRect(j * font_width, i * font_height, font_width, font_height));
             graphicsScene->addItem(proxy);
@@ -108,7 +98,7 @@ void BrailleCanvas::createGrid(){
     }
 }
 
-BrailleTextBox* BrailleCanvas::getTextBoxAt(const QPoint &pos){
+BrailleTextBox* BrailleCanvas::getTextBoxAt(const QPointF &pos){
     QGraphicsItem *item = graphicsScene->itemAt(pos, QTransform());
     BrailleTextProxy *proxy = dynamic_cast<BrailleTextProxy*>(item);
     if (proxy){
@@ -120,40 +110,62 @@ BrailleTextBox* BrailleCanvas::getTextBoxAt(const QPoint &pos){
 
 
 
-void BrailleCanvas::drawBrailleAt(const QPoint &pos) {
+void BrailleCanvas::drawBrailleAt(const QPointF &pos) {
     BrailleTextBox *box = getTextBoxAt(pos);
     if (box) {
         QRect boxRect = box->geometry();
         double relX = (pos.x() - boxRect.left()) / static_cast<double>(boxRect.width());
         double relY = (pos.y() - boxRect.top()) / static_cast<double>(boxRect.height());
 
-        int dotX = relX < 0.5 ? 0 : 1;
-        int dotY = std::min(static_cast<int>(relY * 4), 3);  // Ensure dotY is 0, 1, 2, or 3
+        int dotX;
+
+        if (relX >= 0.15 && relX < 0.30)
+            dotX = 0;
+        else if (relX >= 0.44 && relX < 0.59)
+            dotX = 1;
+
+        int dotY;
+
+        if (relY >=0.22 && relY < 0.38)
+            dotY = 0;
+        else if (relY >= 0.4 && relY < 0.55)
+            dotY = 1;
+        else if (relY >= 0.57 && relY < 0.73)
+            dotY = 2;
+        else if (relY >= 0.75 && relY < 0.90)
+            dotY = 3;
+        else
+            dotY = -1;
 
 
-        QString currentText = box->text();
-        QChar brailleChar = currentText.isEmpty() ? QChar(0x2800) : currentText[0];
-        int brailleCode = brailleChar.unicode();
+        if (dotY != -1){
+            QString currentText = box->text();
+            QChar brailleChar = currentText.isEmpty() ? QChar(0x2800) : currentText[0];
+            int brailleCode = brailleChar.unicode();
 
-        // Calculate the bit to set (0-7)
-        int bitToSet;
-        if (dotX == 0) {
-            if (dotY < 3) {
-                bitToSet = dotY;
+
+            // Calculate the bit to set (0-7)
+            int bitToSet;
+            if (dotX == 0) {
+                if (dotY < 3) {
+                    bitToSet = dotY;
+                } else {
+                    bitToSet = 6;
+                }
             } else {
-                bitToSet = 6;
+                if (dotY < 3) {
+                    bitToSet = dotY + 3;
+                } else {
+                    bitToSet = 7;
+                }
             }
-        } else {
-            if (dotY < 3) {
-                bitToSet = dotY + 3;
-            } else {
-                bitToSet = 7;
-            }
+
+            // Set the appropriate bit in the Braille code
+            brailleCode |= (1 << bitToSet);
+
+            box->setText(QString(QChar(brailleCode)));
         }
 
-        // Set the appropriate bit in the Braille code
-        brailleCode |= (1 << bitToSet);
-
-        box->setText(QString(QChar(brailleCode)));
     }
+
 }

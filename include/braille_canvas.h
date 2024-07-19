@@ -25,19 +25,15 @@ protected:
 private:
     bool isDrawing;
     int rows, cols;
-    QVector<QGraphicsRectItem*> gridCells;
     int fontSize;
     QFont brailleFont;
-    double zoomFactor;
 
     QGraphicsScene* graphicsScene;
     QGraphicsView* graphicsView;
 
-    void drawBrailleAt(const QPoint &pos);
+    void drawBrailleAt(const QPointF &pos);
     void createGrid();
-    QPointF snapToGrid(const QPoint &pos);
-    BrailleTextBox* getTextBoxAt(const QPoint &pos);
-    void updateGrid();
+    BrailleTextBox* getTextBoxAt(const QPointF &pos);
 };
 
 #endif
