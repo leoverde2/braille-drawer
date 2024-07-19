@@ -30,10 +30,24 @@ BrailleCanvas::BrailleCanvas(QWidget *parent) : QWidget(parent), isDrawing(false
     gridLayout = new QGridLayout(this);
     gridLayout->setSpacing(0);
     gridLayout->setContentsMargins(0, 0, 0, 0);
+
     createGrid();
 
 }
 
+
+void applyZoom(qreal factor, const QPoint &cursorPos){
+    QTransform transform = graphicsView
+}
+
+void BrailleCanvas::updateGrid(){
+    QLayoutItem *child;
+    while ((child = gridLayout->takeAt(0)) != nullptr){
+        delete child->widget();
+        delete child;
+    }
+    createGrid();
+}
 
 void BrailleCanvas::mousePressEvent(QMouseEvent *event){
     if (event->button() == Qt::LeftButton){
@@ -56,8 +70,8 @@ void BrailleCanvas::mouseReleaseEvent(QMouseEvent *event){
 
 void BrailleCanvas::createGrid(){
     QFontMetrics fm(brailleFont);
-    int font_width = fm.horizontalAdvance(QChar(0x2800));
-    int font_height = fm.height();
+    int font_width = fm.horizontalAdvance(QChar(0x2800)) * zoomFactor;
+    int font_height = fm.height() * zoomFactor;
 
     cols = width() / font_width;
     rows = height() / font_height;
@@ -67,6 +81,7 @@ void BrailleCanvas::createGrid(){
             BrailleTextBox *box = new BrailleTextBox(this);
             box->setFixedSize(font_width, font_height);
             box->setFont(brailleFont);
+            box->setStyleSheet(QString("font-size: %1px").arg(12 * zoomFactor));
             gridLayout->addWidget(box, i, j);
         }
     }
@@ -89,8 +104,6 @@ void BrailleCanvas::drawBrailleAt(const QPoint &pos) {
 
         int dotX = relX < 0.5 ? 0 : 1;
         int dotY = std::min(static_cast<int>(relY * 4), 3);  // Ensure dotY is 0, 1, 2, or 3
-        std::cout << "x:" << dotX;
-        std::cout << "y:" << dotY << std::endl;
 
 
         QString currentText = box->text();
@@ -112,7 +125,6 @@ void BrailleCanvas::drawBrailleAt(const QPoint &pos) {
                 bitToSet = 7;
             }
         }
-        std::cout << "bit" << bitToSet + 1 << std::endl;
 
         // Set the appropriate bit in the Braille code
         brailleCode |= (1 << bitToSet);

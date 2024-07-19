@@ -2353,6 +2353,10 @@ CMakeFiles/braille-drawer.dir/src/mainwindow.cpp.o: ../src/mainwindow.cpp \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/QMenuBar \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qmenubar.h \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qmenu.h \
+  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/QScrollArea \
+  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qscrollarea.h \
+  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qframe.h \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/QStatusBar \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qstatusbar.h \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/QToolBar \
@@ -2363,11 +2367,12 @@ CMakeFiles/braille-drawer.dir/src/mainwindow.cpp.o: ../src/mainwindow.cpp \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qlayoutitem.h \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qboxlayout.h \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qgridlayout.h \
+  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/QWidget \
+  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qwidget.h \
   ../include/braille_canvas.h \
   ../include/braille_text_box.h \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/QLineEdit \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qlineedit.h \
-  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qframe.h \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qtextcursor.h \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qtextdocument.h \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qurl.h \
@@ -2398,7 +2403,6 @@ CMakeFiles/braille-drawer.dir/src/mainwindow.cpp.o: ../src/mainwindow.cpp \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qgraphicsview.h \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qpainter.h \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qscrollarea.h \
-  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qabstractscrollarea.h \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qgraphicsscene.h \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qgridlayout.h \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qpoint.h
@@ -2760,6 +2764,8 @@ braille-drawer_autogen/6YEA5652QU/moc_mainwindow.cpp:
 
 /usr/include/string.h:
 
+/home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/QScrollArea:
+
 /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qarraydata.h:
 
 /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qrefcount.h:
@@ -3049,6 +3055,8 @@ braille-drawer_autogen/6YEA5652QU/moc_braille_canvas.cpp:
 /usr/include/c++/11/exception:
 
 /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qtpreprocessorsupport.h:
+
+/home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/QWidget:
 
 /usr/include/c++/11/bits/stl_algobase.h:
 

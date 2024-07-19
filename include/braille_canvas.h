@@ -14,7 +14,7 @@ public:
     explicit BrailleCanvas(QWidget *parent = nullptr);
 
     void setFontSize(int size);
-    void updateGrid();
+    void applyZoom(qreal factor, const QPoint &cursorPos);
 
 protected:
     void mousePressEvent(QMouseEvent *event) override;
@@ -28,11 +28,13 @@ private:
     QVector<QGraphicsRectItem*> gridCells;
     int fontSize;
     QFont brailleFont;
+    double zoomFactor;
 
     void drawBrailleAt(const QPoint &pos);
     void createGrid();
     QPointF snapToGrid(const QPoint &pos);
     BrailleTextBox* getTextBoxAt(const QPoint &pos);
+    void updateGrid();
 };
 
 #endif
