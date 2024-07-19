@@ -10,11 +10,6 @@
 #include <QDir>
 #include <QFontDatabase>
 
-#include <QRawFont>
-#include <QPainter>
-#include <QImage>
-
-
 BrailleCanvas::BrailleCanvas(QWidget *parent) : QGraphicsView(parent), isDrawing(false){
     setScene(new QGraphicsScene(this));
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
@@ -24,15 +19,26 @@ BrailleCanvas::BrailleCanvas(QWidget *parent) : QGraphicsView(parent), isDrawing
     scene()->setSceneRect(0, 0, 800, 600);
     setAlignment(Qt::AlignTop | Qt::AlignLeft);
 
-    brailleFont = QFont("DejaVu Sans", fontSize);
+    int fontId = QFontDatabase::addApplicationFont("/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf");
+    if (fontId != -1) {
+        QFontDatabase fontDb;
+        QStringList families = QFontDatabase::applicationFontFamilies(fontId);
+        if (!families.isEmpty()) {
+            brailleFont = QFont(families.first(), 12);
+        } else {
+            qDebug() << "Font families list is empty";
+        }
+    } else {
+        qDebug() << "Failed to load font";
+    }
     updateGrid();
 
-    qDebug() << "Graphics system:" << QGuiApplication::platformName();
 }
 
 void BrailleCanvas::updateGrid(){
     QFontMetrics fm(brailleFont);
     tileWidth = fm.horizontalAdvance("⣿");
+    std::cout << tileWidth << std::endl;
     tileHeight = fm.height();
 
     int sceneWidth = (width() / tileWidth) * tileWidth;
@@ -77,8 +83,8 @@ void BrailleCanvas::drawBackground(QPainter *painter, const QRectF &rect){
 }
 
 QPointF BrailleCanvas::snapToGrid(const QPointF &pos){
-    int x = qFloor(pos.x() / tileWidth) * tileWidth - 3;
-    int y = qFloor(pos.y() / tileHeight) * tileHeight - 3;
+    int x = qFloor(pos.x() / tileWidth) * tileWidth;
+    int y = qFloor(pos.y() / tileHeight) * tileHeight;
     return QPointF(x, y);
 }
 
@@ -97,6 +103,7 @@ void BrailleCanvas::drawBrailleAt(const QPointF &pos){
         QGraphicsTextItem *brailleChar = scene()->addText("⣿", brailleFont);
         QRectF boundingRect = brailleChar->boundingRect();
 
-        brailleChar->setPos(snappedPos);
+        brailleChar->setPos(pos);
+        brailleChar->setFlag(QGraphicsItem::ItemIgnoresTransformations, true);
     }
 }

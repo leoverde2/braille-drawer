@@ -951,14 +951,7 @@ CMakeFiles/braille-drawer.dir/src/braille_canvas.cpp.o: ../src/braille_canvas.cp
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qcalendar.h \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qtimezone.h \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/QFontDatabase \
-  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qfontdatabase.h \
-  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/QRawFont \
-  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qrawfont.h \
-  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qfontdatabase.h \
-  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/QPainter \
-  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qpainter.h \
-  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/QImage \
-  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qimage.h
+  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qfontdatabase.h
 
 CMakeFiles/braille-drawer.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/stdc-predef.h \
@@ -1874,14 +1867,6 @@ CMakeFiles/braille-drawer.dir/src/mainwindow.cpp.o: ../src/mainwindow.cpp \
 /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/QVariant:
 
 ../src/main.cpp:
-
-/home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/QImage:
-
-/home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/QPainter:
-
-/home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qrawfont.h:
-
-/home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/QRawFont:
 
 /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qfontdatabase.h:
 
