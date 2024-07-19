@@ -13,12 +13,8 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <widget class="QWidget" name="centralwidget">
-   <layout class="QVBoxLayout" name="verticalLayout">
-    <item>
-     <widget class="BrailleCanvas" name="graphicsView"/>
-    </item>
-   </layout>
+  <widget class="BrailleCanvas" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout"/>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -74,8 +70,9 @@
  <customwidgets>
   <customwidget>
    <class>BrailleCanvas</class>
-   <extends>QGraphicsView</extends>
+   <extends>QWidget</extends>
    <header>braille_canvas.h</header>
+   <container>1</container>
   </customwidget>
  </customwidgets>
  <resources/>

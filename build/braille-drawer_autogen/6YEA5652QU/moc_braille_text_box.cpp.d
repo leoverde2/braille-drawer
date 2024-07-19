@@ -1,4 +1,4 @@
-/home/ubuntu/projects/braille-drawer/build/braille-drawer_autogen/6YEA5652QU/moc_braille_canvas.cpp: /home/ubuntu/projects/braille-drawer/include/braille_canvas.h \
+/home/ubuntu/projects/braille-drawer/build/braille-drawer_autogen/6YEA5652QU/moc_braille_text_box.cpp: /home/ubuntu/projects/braille-drawer/include/braille_text_box.h \
   /home/ubuntu/projects/braille-drawer/build/braille-drawer_autogen/moc_predefs.h \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/QList \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/QObject \
@@ -151,7 +151,6 @@
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qinputmethod.h \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qkeysequence.h \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qpaintdevice.h \
-  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qpainter.h \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qpalette.h \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qpen.h \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qpixelformat.h \
@@ -174,24 +173,14 @@
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qvector2d.h \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qvectornd.h \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qwindowdefs.h \
-  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/QGraphicsView \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/QLineEdit \
-  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qabstractscrollarea.h \
-  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qboxlayout.h \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qframe.h \
-  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qgraphicsscene.h \
-  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qgraphicsview.h \
-  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qgridlayout.h \
-  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qlayout.h \
-  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qlayoutitem.h \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qlineedit.h \
-  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qscrollarea.h \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qsizepolicy.h \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qtwidgets-config.h \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qtwidgetsexports.h \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qwidget.h \
-  /home/ubuntu/projects/braille-drawer/include/braille_text_box.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \

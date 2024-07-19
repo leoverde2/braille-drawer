@@ -6,6 +6,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/braille-drawer.dir/braille-drawer_autogen/mocs_compilation.cpp.o.d"
   "CMakeFiles/braille-drawer.dir/src/braille_canvas.cpp.o"
   "CMakeFiles/braille-drawer.dir/src/braille_canvas.cpp.o.d"
+  "CMakeFiles/braille-drawer.dir/src/braille_text_box.cpp.o"
+  "CMakeFiles/braille-drawer.dir/src/braille_text_box.cpp.o.d"
   "CMakeFiles/braille-drawer.dir/src/main.cpp.o"
   "CMakeFiles/braille-drawer.dir/src/main.cpp.o.d"
   "CMakeFiles/braille-drawer.dir/src/mainwindow.cpp.o"
