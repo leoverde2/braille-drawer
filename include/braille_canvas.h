@@ -20,15 +20,18 @@ protected:
     void mousePressEvent(QMouseEvent *event) override;
     void mouseMoveEvent(QMouseEvent *event) override;
     void mouseReleaseEvent(QMouseEvent *event) override;
+    void wheelEvent(QWheelEvent *event) override;
 
 private:
-    QGridLayout *gridLayout;
     bool isDrawing;
     int rows, cols;
     QVector<QGraphicsRectItem*> gridCells;
     int fontSize;
     QFont brailleFont;
     double zoomFactor;
+
+    QGraphicsScene* graphicsScene;
+    QGraphicsView* graphicsView;
 
     void drawBrailleAt(const QPoint &pos);
     void createGrid();

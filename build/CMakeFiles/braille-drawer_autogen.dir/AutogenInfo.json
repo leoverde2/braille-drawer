@@ -418,6 +418,12 @@
 			null
 		],
 		[
+			"/home/ubuntu/projects/braille-drawer/include/braille_view.h",
+			"MU",
+			"6YEA5652QU/moc_braille_view.cpp",
+			null
+		],
+		[
 			"/home/ubuntu/projects/braille-drawer/include/mainwindow.h",
 			"MU",
 			"6YEA5652QU/moc_mainwindow.cpp",
@@ -491,6 +497,11 @@
 		],
 		[
 			"/home/ubuntu/projects/braille-drawer/src/braille_text_box.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/ubuntu/projects/braille-drawer/src/braille_view.cpp",
 			"MU",
 			null
 		],

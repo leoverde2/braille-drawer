@@ -4,6 +4,14 @@
 #include <QLineEdit>
 #include <qevent.h>
 #include <qwidget.h>
+#include <QGraphicsProxyWidget>
+
+class BrailleTextProxy : public QGraphicsProxyWidget{
+    Q_OBJECT
+
+public:
+    explicit BrailleTextProxy(QGraphicsItem *parent = nullptr);
+}; 
 
 class BrailleTextBox : public QLineEdit {
     Q_OBJECT

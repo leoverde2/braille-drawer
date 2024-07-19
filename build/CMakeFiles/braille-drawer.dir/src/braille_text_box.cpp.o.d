@@ -404,4 +404,11 @@ CMakeFiles/braille-drawer.dir/src/braille_text_box.cpp.o: \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qinputmethod.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qlocale.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qguiapplication_platform.h \
- /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qwidget.h
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qwidget.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/QGraphicsProxyWidget \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qgraphicsproxywidget.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qgraphicswidget.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qgraphicslayoutitem.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qevent.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qgraphicsitem.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qpainterpath.h

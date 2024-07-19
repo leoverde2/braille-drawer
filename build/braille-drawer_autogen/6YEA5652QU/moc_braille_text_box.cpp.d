@@ -151,6 +151,7 @@
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qinputmethod.h \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qkeysequence.h \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qpaintdevice.h \
+  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qpainterpath.h \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qpalette.h \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qpen.h \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qpixelformat.h \
@@ -173,8 +174,13 @@
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qvector2d.h \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qvectornd.h \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qwindowdefs.h \
+  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/QGraphicsProxyWidget \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/QLineEdit \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qframe.h \
+  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qgraphicsitem.h \
+  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qgraphicslayoutitem.h \
+  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qgraphicsproxywidget.h \
+  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qgraphicswidget.h \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qlineedit.h \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qsizepolicy.h \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qtwidgets-config.h \

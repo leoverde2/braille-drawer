@@ -1,5 +1,11 @@
 #include "braille_text_box.h"
 #include <qevent.h>
+#include <QGraphicsProxyWidget>
+
+BrailleTextProxy :: BrailleTextProxy(QGraphicsItem *parent) : QGraphicsProxyWidget(parent){
+    BrailleTextBox* textBox = new BrailleTextBox();
+    setWidget(textBox);
+} 
 
 BrailleTextBox :: BrailleTextBox(QWidget *parent) : QLineEdit(parent){
     setAlignment(Qt::AlignCenter);

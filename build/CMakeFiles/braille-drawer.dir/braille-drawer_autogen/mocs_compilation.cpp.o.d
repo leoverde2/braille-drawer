@@ -407,6 +407,13 @@ CMakeFiles/braille-drawer.dir/braille-drawer_autogen/mocs_compilation.cpp.o: \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qlocale.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qguiapplication_platform.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qwidget.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/QGraphicsProxyWidget \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qgraphicsproxywidget.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qgraphicswidget.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qgraphicslayoutitem.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qevent.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qgraphicsitem.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qpainterpath.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/QGraphicsView \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qgraphicsview.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qpainter.h \
@@ -422,6 +429,10 @@ CMakeFiles/braille-drawer.dir/braille-drawer_autogen/mocs_compilation.cpp.o: \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qtmochelpers.h \
  /home/ubuntu/projects/braille-drawer/build/braille-drawer_autogen/6YEA5652QU/moc_braille_text_box.cpp \
  /home/ubuntu/projects/braille-drawer/build/braille-drawer_autogen/6YEA5652QU/../../../include/braille_text_box.h \
+ /home/ubuntu/projects/braille-drawer/build/braille-drawer_autogen/6YEA5652QU/moc_braille_view.cpp \
+ /home/ubuntu/projects/braille-drawer/build/braille-drawer_autogen/6YEA5652QU/../../../include/braille_view.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/QGraphicsScene \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qgraphicsscene.h \
  /home/ubuntu/projects/braille-drawer/build/braille-drawer_autogen/6YEA5652QU/moc_mainwindow.cpp \
  /home/ubuntu/projects/braille-drawer/build/braille-drawer_autogen/6YEA5652QU/../../../include/mainwindow.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/QMainWindow \

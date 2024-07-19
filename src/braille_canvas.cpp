@@ -11,6 +11,7 @@
 #include <QDir>
 #include <QFontDatabase>
 #include "braille_text_box.h"
+#include "braille_view.h"
 
 BrailleCanvas::BrailleCanvas(QWidget *parent) : QWidget(parent), isDrawing(false){
     setFixedSize(800, 600);
@@ -27,38 +28,55 @@ BrailleCanvas::BrailleCanvas(QWidget *parent) : QWidget(parent), isDrawing(false
     } else {
         qDebug() << "Failed to load font";
     }
-    gridLayout = new QGridLayout(this);
-    gridLayout->setSpacing(0);
-    gridLayout->setContentsMargins(0, 0, 0, 0);
+   
+    zoomFactor = 1;
+
+    graphicsScene = new QGraphicsScene(this);
+    graphicsView = new BrailleView(graphicsScene, this);
+    graphicsView->setGeometry(rect());
+    graphicsView->setRenderHint(QPainter::Antialiasing);
 
     createGrid();
 
 }
 
-
-void applyZoom(qreal factor, const QPoint &cursorPos){
-    QTransform transform = graphicsView
+void BrailleCanvas::wheelEvent(QWheelEvent *event){
+    qreal factor = event->angleDelta().y() > 0 ? 1.2 : 1.0 / 1.2;
+    applyZoom(factor, event->position().toPoint());
+    event->accept();
 }
 
-void BrailleCanvas::updateGrid(){
-    QLayoutItem *child;
-    while ((child = gridLayout->takeAt(0)) != nullptr){
-        delete child->widget();
-        delete child;
-    }
-    createGrid();
+void BrailleCanvas::applyZoom(qreal factor, const QPoint &cursorPos){
+    QTransform transform = graphicsView->transform();
+
+    transform.scale(factor, factor);
+    graphicsView->setTransform(transform);
+
+    QPointF cursorScenePos = graphicsView->mapToScene(cursorPos);
+    QPointF newScrollPos = cursorScenePos - (cursorScenePos - graphicsView->mapFromScene(cursorScenePos) / factor);
 }
+
+//void BrailleCanvas::updateGrid(){
+//    QLayoutItem *child;
+//    while ((child = gridLayout->takeAt(0)) != nullptr){
+//        delete child->widget();
+//        delete child;
+//    }
+//    createGrid();
+//}
 
 void BrailleCanvas::mousePressEvent(QMouseEvent *event){
     if (event->button() == Qt::LeftButton){
         isDrawing = true;
-        drawBrailleAt(event->pos());
+        QPointF scenePos = graphicsView->mapToScene(event->pos());
+        drawBrailleAt(QPoint(static_cast<int>(scenePos.x()), static_cast<int>(scenePos.y())));
     }
 }
 
 void BrailleCanvas::mouseMoveEvent(QMouseEvent *event){
     if (isDrawing){
-        drawBrailleAt(event->pos());
+        QPointF scenePos = graphicsView->mapToScene(event->pos());
+        drawBrailleAt(QPoint(static_cast<int>(scenePos.x()), static_cast<int>(scenePos.y())));
     }
 }
 
@@ -78,18 +96,25 @@ void BrailleCanvas::createGrid(){
 
     for (int i = 0; i < rows; ++i){
         for (int j = 0; j < cols; ++j){
-            BrailleTextBox *box = new BrailleTextBox(this);
+            BrailleTextProxy *proxy = new BrailleTextProxy();
+            BrailleTextBox *box = qobject_cast<BrailleTextBox*>(proxy->widget());
             box->setFixedSize(font_width, font_height);
             box->setFont(brailleFont);
             box->setStyleSheet(QString("font-size: %1px").arg(12 * zoomFactor));
-            gridLayout->addWidget(box, i, j);
+
+            proxy->setGeometry(QRect(j * font_width, i * font_height, font_width, font_height));
+            graphicsScene->addItem(proxy);
         }
     }
 }
 
 BrailleTextBox* BrailleCanvas::getTextBoxAt(const QPoint &pos){
-    QWidget *widget = childAt(pos);
-    return qobject_cast<BrailleTextBox*>(widget);
+    QGraphicsItem *item = graphicsScene->itemAt(pos, QTransform());
+    BrailleTextProxy *proxy = dynamic_cast<BrailleTextProxy*>(item);
+    if (proxy){
+        return qobject_cast<BrailleTextBox*>(proxy->widget());
+    }
+    return nullptr;
 }
 
 
