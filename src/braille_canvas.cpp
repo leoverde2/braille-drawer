@@ -119,18 +119,20 @@ void BrailleCanvas::drawBrailleAt(const QPointF &pos) {
 
         int dotX;
 
-        if (relX >= 0.15 && relX < 0.30)
+        if (relX >= 0.07 && relX < 0.40)
             dotX = 0;
-        else if (relX >= 0.44 && relX < 0.59)
+        else if (relX >= 0.40 && relX < 0.63)
             dotX = 1;
+        else
+            dotX = -1;         
 
         int dotY;
 
-        if (relY >=0.22 && relY < 0.38)
+        if (relY >=0.17 && relY < 0.4)
             dotY = 0;
-        else if (relY >= 0.4 && relY < 0.55)
+        else if (relY >= 0.4 && relY < 0.57)
             dotY = 1;
-        else if (relY >= 0.57 && relY < 0.73)
+        else if (relY >= 0.57 && relY < 0.75)
             dotY = 2;
         else if (relY >= 0.75 && relY < 0.90)
             dotY = 3;
@@ -138,7 +140,7 @@ void BrailleCanvas::drawBrailleAt(const QPointF &pos) {
             dotY = -1;
 
 
-        if (dotY != -1){
+        if (dotY != -1 && dotX != -1){
             QString currentText = box->text();
             QChar brailleChar = currentText.isEmpty() ? QChar(0x2800) : currentText[0];
             int brailleCode = brailleChar.unicode();
