@@ -1,0 +1,26 @@
+[
+{
+  "directory": "/home/ubuntu/projects/braille-drawer/build/Desktop_Qt_6_7_2-Debug",
+  "command": "/usr/bin/clang++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/ubuntu/projects/braille-drawer/build/Desktop_Qt_6_7_2-Debug/braille-drawer_autogen/include -I/home/ubuntu/projects/braille-drawer/src -I/home/ubuntu/projects/braille-drawer/include -isystem /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore -isystem /home/ubuntu/opt/Qt/6.7.2/gcc_64/include -isystem /home/ubuntu/opt/Qt/6.7.2/gcc_64/mkspecs/linux-g++ -isystem /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets -isystem /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui -DQT_QML_DEBUG -g -g -g -std=gnu++17 -fcolor-diagnostics -fPIC -o CMakeFiles/braille-drawer.dir/braille-drawer_autogen/mocs_compilation.cpp.o -c /home/ubuntu/projects/braille-drawer/build/Desktop_Qt_6_7_2-Debug/braille-drawer_autogen/mocs_compilation.cpp",
+  "file": "/home/ubuntu/projects/braille-drawer/build/Desktop_Qt_6_7_2-Debug/braille-drawer_autogen/mocs_compilation.cpp",
+  "output": "CMakeFiles/braille-drawer.dir/braille-drawer_autogen/mocs_compilation.cpp.o"
+},
+{
+  "directory": "/home/ubuntu/projects/braille-drawer/build/Desktop_Qt_6_7_2-Debug",
+  "command": "/usr/bin/clang++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/ubuntu/projects/braille-drawer/build/Desktop_Qt_6_7_2-Debug/braille-drawer_autogen/include -I/home/ubuntu/projects/braille-drawer/src -I/home/ubuntu/projects/braille-drawer/include -isystem /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore -isystem /home/ubuntu/opt/Qt/6.7.2/gcc_64/include -isystem /home/ubuntu/opt/Qt/6.7.2/gcc_64/mkspecs/linux-g++ -isystem /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets -isystem /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui -DQT_QML_DEBUG -g -g -g -std=gnu++17 -fcolor-diagnostics -fPIC -o CMakeFiles/braille-drawer.dir/src/braille_canvas.cpp.o -c /home/ubuntu/projects/braille-drawer/src/braille_canvas.cpp",
+  "file": "/home/ubuntu/projects/braille-drawer/src/braille_canvas.cpp",
+  "output": "CMakeFiles/braille-drawer.dir/src/braille_canvas.cpp.o"
+},
+{
+  "directory": "/home/ubuntu/projects/braille-drawer/build/Desktop_Qt_6_7_2-Debug",
+  "command": "/usr/bin/clang++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/ubuntu/projects/braille-drawer/build/Desktop_Qt_6_7_2-Debug/braille-drawer_autogen/include -I/home/ubuntu/projects/braille-drawer/src -I/home/ubuntu/projects/braille-drawer/include -isystem /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore -isystem /home/ubuntu/opt/Qt/6.7.2/gcc_64/include -isystem /home/ubuntu/opt/Qt/6.7.2/gcc_64/mkspecs/linux-g++ -isystem /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets -isystem /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui -DQT_QML_DEBUG -g -g -g -std=gnu++17 -fcolor-diagnostics -fPIC -o CMakeFiles/braille-drawer.dir/src/main.cpp.o -c /home/ubuntu/projects/braille-drawer/src/main.cpp",
+  "file": "/home/ubuntu/projects/braille-drawer/src/main.cpp",
+  "output": "CMakeFiles/braille-drawer.dir/src/main.cpp.o"
+},
+{
+  "directory": "/home/ubuntu/projects/braille-drawer/build/Desktop_Qt_6_7_2-Debug",
+  "command": "/usr/bin/clang++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/ubuntu/projects/braille-drawer/build/Desktop_Qt_6_7_2-Debug/braille-drawer_autogen/include -I/home/ubuntu/projects/braille-drawer/src -I/home/ubuntu/projects/braille-drawer/include -isystem /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore -isystem /home/ubuntu/opt/Qt/6.7.2/gcc_64/include -isystem /home/ubuntu/opt/Qt/6.7.2/gcc_64/mkspecs/linux-g++ -isystem /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets -isystem /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui -DQT_QML_DEBUG -g -g -g -std=gnu++17 -fcolor-diagnostics -fPIC -o CMakeFiles/braille-drawer.dir/src/mainwindow.cpp.o -c /home/ubuntu/projects/braille-drawer/src/mainwindow.cpp",
+  "file": "/home/ubuntu/projects/braille-drawer/src/mainwindow.cpp",
+  "output": "CMakeFiles/braille-drawer.dir/src/mainwindow.cpp.o"
+}
+]

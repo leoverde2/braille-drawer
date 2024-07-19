@@ -1,0 +1,10 @@
+# ninja log v5
+0	347	1721337409472374846	braille-drawer_autogen/timestamp	cddeabe96e20898b
+0	347	1721337409472374846	braille-drawer_autogen/mocs_compilation.cpp	cddeabe96e20898b
+0	347	1721337409472374846	/home/ubuntu/projects/braille-drawer/build/Desktop_Qt_6_7_2-Debug/braille-drawer_autogen/timestamp	cddeabe96e20898b
+0	347	1721337409472374846	/home/ubuntu/projects/braille-drawer/build/Desktop_Qt_6_7_2-Debug/braille-drawer_autogen/mocs_compilation.cpp	cddeabe96e20898b
+348	2022	1721337411152374850	CMakeFiles/braille-drawer.dir/src/main.cpp.o	10b41812f1ce36ce
+347	2032	1721337411162374850	CMakeFiles/braille-drawer.dir/braille-drawer_autogen/mocs_compilation.cpp.o	b9f14d9f187230f8
+348	2073	1721337411202374850	CMakeFiles/braille-drawer.dir/src/mainwindow.cpp.o	471b44dc6207edf4
+347	2383	1721337411512374851	CMakeFiles/braille-drawer.dir/src/braille_canvas.cpp.o	3d92d6ed33127fd0
+2383	2790	1721337411922374852	braille-drawer	c97682d6c94e86d5

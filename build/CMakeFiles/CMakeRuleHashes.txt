@@ -1,0 +1,2 @@
+# Hashes of file build rules.
+60cecb6d4cec2d069ecb1c5186a87f4c CMakeFiles/braille-drawer_autogen
