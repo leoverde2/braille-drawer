@@ -426,6 +426,8 @@ CMakeFiles/braille-drawer.dir/braille-drawer_autogen/mocs_compilation.cpp.o: \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qboxlayout.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qgridlayout.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qpoint.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/QVector \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qvector.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qtmochelpers.h \
  /home/ubuntu/projects/braille-drawer/build/braille-drawer_autogen/6YEA5652QU/moc_braille_text_box.cpp \
  /home/ubuntu/projects/braille-drawer/build/braille-drawer_autogen/6YEA5652QU/../../../include/braille_text_box.h \

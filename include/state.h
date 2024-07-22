@@ -11,15 +11,16 @@
 class State{
 public:
     std::any saved_state;
-    virtual void load();
+    virtual void load() = 0;
+    virtual ~State() = default;
 };
 
 class CanvasState : public State{
 public:
-    CanvasState(BrailleCanvas* current_state, QList<QGraphicsItem*>);
+    CanvasState(BrailleCanvas* current_state, QList<QString>);
 
     BrailleCanvas* canvas;
-    QList<QGraphicsItem*> saved_state;
+    QList<QString> saved_state;
     void load();
 };
 

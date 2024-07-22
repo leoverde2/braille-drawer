@@ -5,6 +5,7 @@
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/QRect \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/QSize \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/QSizeF \
+  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/QVector \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/q20functional.h \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/q20memory.h \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/q20type_traits.h \
@@ -129,6 +130,7 @@
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qutf8stringview.h \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qvariant.h \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qvarlengtharray.h \
+  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qvector.h \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qversiontagging.h \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qxptype_traits.h \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qyieldcpu.h \

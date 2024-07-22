@@ -18,8 +18,8 @@ public:
     explicit BrailleCanvas(QWidget *parent = nullptr);
 
     void setFontSize(int size);
-    QList<BrailleTextProxy> getState();
-    void setState(QList<BrailleTextProxy*>);
+    QList<QString> getState();
+    void setState(QList<QString>);
 
     void stateTrackerSetter(StateTracker* state_tracker);
 

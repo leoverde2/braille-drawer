@@ -40,6 +40,10 @@ BrailleCanvas::BrailleCanvas(QWidget *parent) : QWidget(parent), isDrawing(false
 
 }
 
+void BrailleCanvas::stateTrackerSetter(StateTracker *tracker){
+    state_tracker = tracker;
+}
+
 
 void BrailleCanvas::applyZoom(qreal factor, const QPoint &cursorPos){
     QPointF targetScenePos = graphicsView->mapToScene(cursorPos);
@@ -55,20 +59,25 @@ void BrailleCanvas::applyZoom(qreal factor, const QPoint &cursorPos){
 
 }
 
-QList<BrailleTextProxy> BrailleCanvas::getState(){
-    QList<BrailleTextProxy> proxies;
+QList<QString> BrailleCanvas::getState(){
+    QList<QString> text_list;
     for(auto *item : graphicsScene->items()){
         if (BrailleTextProxy *proxy = dynamic_cast<BrailleTextProxy*>(item)) {
-            proxies.append(*proxy);
+            if (BrailleTextBox *box = dynamic_cast<BrailleTextBox*>(proxy->widget()))
+                text_list.append(box->text());
         }
     }
-    return proxies;
+    return text_list;
 }
 
-void BrailleCanvas::setState(QVector<BrailleTextProxy*> proxies){
-    graphicsScene->clear();
-    for (auto proxy : proxies){
-        graphicsScene->addItem(proxy);
+void BrailleCanvas::setState(QList<QString> strings){
+    QList<QGraphicsItem*> items = graphicsScene->items(); 
+    for (auto i = 0; i < strings.size(); ++i){
+        if (auto proxy = dynamic_cast<BrailleTextProxy*>(items[i])){
+            if (auto box = dynamic_cast<BrailleTextBox*>(proxy->widget())){
+                box->setText(strings[i]);
+            }
+        }
     }
 }
 
@@ -80,7 +89,7 @@ void BrailleCanvas::wheelEvent(QWheelEvent *event){
 
 void BrailleCanvas::mousePressEvent(QMouseEvent *event){
     if (event->button() == Qt::LeftButton){
-        CanvasState* saved = new CanvasState(this, graphicsScene->items());
+        CanvasState* saved = new CanvasState(this, getState());
         state_tracker->push(saved);
         isDrawing = true;
         QPointF scenePos = graphicsView->mapToScene(event->pos());
@@ -107,8 +116,10 @@ void BrailleCanvas::keyPressEvent(QKeyEvent *event){
         switch (event->key()){
             case Qt::Key_Z:
                 state_tracker->undo();
+                break;
             case Qt::Key_Y:
                 state_tracker->redo();
+                break;
         }
     }
 }
@@ -126,7 +137,7 @@ void BrailleCanvas::createGrid(){
             BrailleTextProxy *proxy = new BrailleTextProxy();
             BrailleTextBox *box = new BrailleTextBox();
             proxy->setWidget(box);
-            
+
             box->setFixedSize(font_width, font_height);
             box->setFont(brailleFont);
             box->setStyleSheet(QString("font-size: %1px").arg(12));

@@ -1,9 +1,11 @@
-CMakeFiles/braille-drawer.dir/src/mainwindow.cpp.o: \
- /home/ubuntu/projects/braille-drawer/src/mainwindow.cpp \
+CMakeFiles/braille-drawer.dir/src/state.cpp.o: \
+ /home/ubuntu/projects/braille-drawer/src/state.cpp \
  /usr/include/stdc-predef.h \
- /home/ubuntu/projects/braille-drawer/include/mainwindow.h \
- /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/QMainWindow \
- /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qmainwindow.h \
+ /home/ubuntu/projects/braille-drawer/include/state.h \
+ /home/ubuntu/projects/braille-drawer/include/braille_canvas.h \
+ /home/ubuntu/projects/braille-drawer/include/braille_text_box.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/QLineEdit \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qlineedit.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qtguiglobal.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qglobal.h \
@@ -161,6 +163,7 @@ CMakeFiles/braille-drawer.dir/src/mainwindow.cpp.o: \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qtguiexports.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qtwidgets-config.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qtwidgetsexports.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qframe.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qwidget.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qwindowdefs.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qobjectdefs.h \
@@ -366,52 +369,14 @@ CMakeFiles/braille-drawer.dir/src/mainwindow.cpp.o: \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qsizepolicy.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qcursor.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qbitmap.h \
- /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qtabwidget.h \
- /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qgraphicsscene.h \
- /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qpen.h \
- /home/ubuntu/projects/braille-drawer/build/braille-drawer_autogen/include/./ui_mainwindow.h \
- /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/QVariant \
- /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qvariant.h \
- /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/QAction \
- /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qaction.h \
- /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/QApplication \
- /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qapplication.h \
- /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qcoreapplication.h \
- /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qcoreevent.h \
- /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qdeadlinetimer.h \
- /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qelapsedtimer.h \
- /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qeventloop.h \
- /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qnativeinterface.h \
- /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qcoreapplication_platform.h \
- /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qguiapplication.h \
- /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qinputmethod.h \
- /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qlocale.h \
- /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qguiapplication_platform.h \
- /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/QMainWindow \
- /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/QMenuBar \
- /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qmenubar.h \
- /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qmenu.h \
- /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/QStatusBar \
- /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qstatusbar.h \
- /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/QToolBar \
- /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qtoolbar.h \
- /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/QVBoxLayout \
- /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qboxlayout.h \
- /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qlayout.h \
- /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qlayoutitem.h \
- /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qboxlayout.h \
- /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qgridlayout.h \
- /home/ubuntu/projects/braille-drawer/include/braille_canvas.h \
- /home/ubuntu/projects/braille-drawer/include/braille_text_box.h \
- /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/QLineEdit \
- /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qlineedit.h \
- /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qframe.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qtextcursor.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qtextdocument.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qurl.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qtextformat.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qpen.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qtextoption.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qevent.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qcoreevent.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qiodevice.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qeventpoint.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qvector2d.h \
@@ -430,7 +395,17 @@ CMakeFiles/braille-drawer.dir/src/mainwindow.cpp.o: \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/QSizeF \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/QTransform \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qtransform.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qnativeinterface.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qscreen_platform.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qguiapplication.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qcoreapplication.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qdeadlinetimer.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qelapsedtimer.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qeventloop.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qcoreapplication_platform.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qinputmethod.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qlocale.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qguiapplication_platform.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qwidget.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/QGraphicsProxyWidget \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qgraphicsproxywidget.h \
@@ -446,13 +421,17 @@ CMakeFiles/braille-drawer.dir/src/mainwindow.cpp.o: \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qabstractscrollarea.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qgraphicsscene.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qgridlayout.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qlayout.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qlayoutitem.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qboxlayout.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qgridlayout.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qpoint.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/QVector \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qvector.h \
- /home/ubuntu/projects/braille-drawer/include/state.h \
- /home/ubuntu/projects/braille-drawer/include/braille_canvas.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/QPointF \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qpoint.h \
  /usr/include/c++/11/any \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qgraphicsitem.h \
- /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qlist.h
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qlist.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/QDebug \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qdebug.h

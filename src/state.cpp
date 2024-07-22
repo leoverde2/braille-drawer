@@ -1,7 +1,10 @@
 #include "state.h"
-#include "braille_text_box.h"
 #include <qlist.h>
+#include <QDebug>
 
+StateTracker::StateTracker()
+    :stack_index(0){
+}
 
 void StateTracker::undo(){
     if (stack_index > 0){
@@ -11,6 +14,8 @@ void StateTracker::undo(){
 }
 
 void StateTracker::redo(){
+    qDebug() << stack_index;
+    qDebug() << state_stack.size();
     if (stack_index < state_stack.size() - 1){
         ++stack_index;
         state_stack[stack_index]->load();
@@ -18,20 +23,17 @@ void StateTracker::redo(){
 }
 
 void StateTracker::push(State* state){
-    state_stack[stack_index] = state;
+    if (stack_index < state_stack.size() - 1)
+        state_stack.erase(state_stack.begin() + stack_index, state_stack.end());
+    state_stack.append(state);
     stack_index ++;
 }
 
-CanvasState::CanvasState(BrailleCanvas* current_canvas, QList<QGraphicsItem*> saved_state)
+CanvasState::CanvasState(BrailleCanvas* current_canvas, QList<QString> saved_state)
     : canvas(current_canvas), 
     saved_state(saved_state){
 }
 
 void CanvasState::load(){
-    QList<BrailleTextProxy*> proxies;
-    for (auto item : saved_state){
-        BrailleTextProxy* proxy = dynamic_cast<BrailleTextProxy*>(item);
-        proxies.append(proxy);
-    }
-    canvas->setState(proxies);
+    canvas->setState(saved_state);
 }
