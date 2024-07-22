@@ -11,6 +11,7 @@ MainWindow::MainWindow(QWidget *parent)
     StateTracker* stateTracker = new StateTracker();
     BrailleCanvas* canvas = ui->centralwidget;
     canvas->stateTrackerSetter(stateTracker);
+    canvas->createGrid();
 }
 
 MainWindow::~MainWindow()

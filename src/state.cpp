@@ -14,8 +14,6 @@ void StateTracker::undo(){
 }
 
 void StateTracker::redo(){
-    qDebug() << stack_index;
-    qDebug() << state_stack.size();
     if (stack_index < state_stack.size() - 1){
         ++stack_index;
         state_stack[stack_index]->load();

@@ -2,6 +2,7 @@
 #include <iostream>
 #include "braille_canvas.h"
 #include <qgraphicsitem.h>
+#include <qgraphicsproxywidget.h>
 #include <qgraphicsscene.h>
 #include <qgraphicsview.h>
 #include <qgridlayout.h>
@@ -36,7 +37,6 @@ BrailleCanvas::BrailleCanvas(QWidget *parent) : QWidget(parent), isDrawing(false
     graphicsView->setGeometry(rect());
     graphicsView->setRenderHint(QPainter::Antialiasing);
 
-    createGrid();
 
 }
 
@@ -124,6 +124,17 @@ void BrailleCanvas::keyPressEvent(QKeyEvent *event){
     }
 }
 
+void BrailleCanvas::clearAllText(){
+    auto items = graphicsScene->items();
+    for (auto item : items){
+        if (auto proxy = dynamic_cast<BrailleTextProxy*>(item)){
+            if (auto box = dynamic_cast<BrailleTextBox*>(proxy->widget())){
+                box->clear();
+            }
+        }
+    }
+}
+
 void BrailleCanvas::createGrid(){
     QFontMetrics fm(brailleFont);
     int font_width = fm.horizontalAdvance(QChar(0x2800));
@@ -145,7 +156,7 @@ void BrailleCanvas::createGrid(){
             proxy->setGeometry(QRect(j * font_width, i * font_height, font_width, font_height));
             graphicsScene->addItem(proxy);
         }
-    }
+    }    
 }
 
 BrailleTextBox* BrailleCanvas::getTextBoxAt(const QPointF &pos){

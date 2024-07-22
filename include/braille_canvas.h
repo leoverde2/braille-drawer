@@ -16,6 +16,8 @@ class BrailleCanvas : public QWidget{
 
 public:
     explicit BrailleCanvas(QWidget *parent = nullptr);
+    void createGrid();
+    void clearAllText();
 
     void setFontSize(int size);
     QList<QString> getState();
@@ -40,7 +42,6 @@ private:
     QGraphicsView* graphicsView;
 
     void drawBrailleAt(const QPointF &pos);
-    void createGrid();
     BrailleTextBox* getTextBoxAt(const QPointF &pos);
     void applyZoom(qreal factor, const QPoint &cursorPos);
 
