@@ -20,3 +20,14 @@ void BrailleView::mouseMoveEvent(QMouseEvent *event){
 void BrailleView::mouseReleaseEvent(QMouseEvent *event){
     event->ignore();
 }
+
+void BrailleView::wheelEvent(QWheelEvent *event){
+    bool isCtrlPressed = event->modifiers() & Qt::ControlModifier;
+    if (isCtrlPressed)
+        event->ignore();
+    else{
+        QGraphicsView::wheelEvent(event);
+        event->accept();
+    } 
+}
+

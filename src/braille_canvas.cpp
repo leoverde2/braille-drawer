@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <iostream>
 #include "braille_canvas.h"
 #include <qgraphicsitem.h>
@@ -12,13 +13,13 @@
 #include <QFontDatabase>
 #include "braille_text_box.h"
 #include "braille_view.h"
+#include <state.h>
 
 BrailleCanvas::BrailleCanvas(QWidget *parent) : QWidget(parent), isDrawing(false){
     setFixedSize(800, 600);
 
     int fontId = QFontDatabase::addApplicationFont("/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf");
     if (fontId != -1) {
-        QFontDatabase fontDb;
         QStringList families = QFontDatabase::applicationFontFamilies(fontId);
         if (!families.isEmpty()) {
             brailleFont = QFont(families.first(), 12);
@@ -29,6 +30,7 @@ BrailleCanvas::BrailleCanvas(QWidget *parent) : QWidget(parent), isDrawing(false
         qDebug() << "Failed to load font";
     }
 
+
     graphicsScene = new QGraphicsScene(this);
     graphicsView = new BrailleView(graphicsScene, this);
     graphicsView->setGeometry(rect());
@@ -38,25 +40,48 @@ BrailleCanvas::BrailleCanvas(QWidget *parent) : QWidget(parent), isDrawing(false
 
 }
 
+
+void BrailleCanvas::applyZoom(qreal factor, const QPoint &cursorPos){
+    QPointF targetScenePos = graphicsView->mapToScene(cursorPos);
+
+    QTransform transform = graphicsView->transform();
+
+    transform.scale(factor, factor);
+    graphicsView->setTransform(transform);
+
+    QPointF newCenter = graphicsView->mapFromScene(targetScenePos) - cursorPos + QPointF(graphicsView->viewport()->width() / 2.0, graphicsView->viewport()->height() / 2.0);
+
+    graphicsView->centerOn(graphicsView->mapToScene(newCenter.toPoint()));
+
+}
+
+QList<BrailleTextProxy> BrailleCanvas::getState(){
+    QList<BrailleTextProxy> proxies;
+    for(auto *item : graphicsScene->items()){
+        if (BrailleTextProxy *proxy = dynamic_cast<BrailleTextProxy*>(item)) {
+            proxies.append(*proxy);
+        }
+    }
+    return proxies;
+}
+
+void BrailleCanvas::setState(QVector<BrailleTextProxy*> proxies){
+    graphicsScene->clear();
+    for (auto proxy : proxies){
+        graphicsScene->addItem(proxy);
+    }
+}
+
 void BrailleCanvas::wheelEvent(QWheelEvent *event){
     qreal factor = event->angleDelta().y() > 0 ? 1.2 : 1.0 / 1.2;
     applyZoom(factor, event->position().toPoint());
     event->accept();
 }
 
-void BrailleCanvas::applyZoom(qreal factor, const QPoint &cursorPos){
-    QTransform transform = graphicsView->transform();
-
-    transform.scale(factor, factor);
-    graphicsView->setTransform(transform);
-
-    QPointF cursorScenePos = graphicsView->mapToScene(cursorPos);
-    QPointF newScrollPos = cursorScenePos - (cursorScenePos - graphicsView->mapFromScene(cursorScenePos) / factor);
-}
-
-
 void BrailleCanvas::mousePressEvent(QMouseEvent *event){
     if (event->button() == Qt::LeftButton){
+        CanvasState* saved = new CanvasState(this, graphicsScene->items());
+        state_tracker->push(saved);
         isDrawing = true;
         QPointF scenePos = graphicsView->mapToScene(event->pos());
         drawBrailleAt(scenePos);
@@ -76,6 +101,18 @@ void BrailleCanvas::mouseReleaseEvent(QMouseEvent *event){
     }
 }
 
+void BrailleCanvas::keyPressEvent(QKeyEvent *event){
+    bool isCtrlPressed = event->modifiers() & Qt::ControlModifier;
+    if (isCtrlPressed){
+        switch (event->key()){
+            case Qt::Key_Z:
+                state_tracker->undo();
+            case Qt::Key_Y:
+                state_tracker->redo();
+        }
+    }
+}
+
 void BrailleCanvas::createGrid(){
     QFontMetrics fm(brailleFont);
     int font_width = fm.horizontalAdvance(QChar(0x2800));
@@ -87,7 +124,9 @@ void BrailleCanvas::createGrid(){
     for (int i = 0; i < rows; ++i){
         for (int j = 0; j < cols; ++j){
             BrailleTextProxy *proxy = new BrailleTextProxy();
-            BrailleTextBox *box = qobject_cast<BrailleTextBox*>(proxy->widget());
+            BrailleTextBox *box = new BrailleTextBox();
+            proxy->setWidget(box);
+            
             box->setFixedSize(font_width, font_height);
             box->setFont(brailleFont);
             box->setStyleSheet(QString("font-size: %1px").arg(12));

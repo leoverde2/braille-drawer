@@ -3,8 +3,6 @@
 #include <QGraphicsProxyWidget>
 
 BrailleTextProxy :: BrailleTextProxy(QGraphicsItem *parent) : QGraphicsProxyWidget(parent){
-    BrailleTextBox* textBox = new BrailleTextBox();
-    setWidget(textBox);
 } 
 
 BrailleTextBox :: BrailleTextBox(QWidget *parent) : QLineEdit(parent){
@@ -25,6 +23,10 @@ void BrailleTextBox :: mouseMoveEvent(QMouseEvent *event){
 }
 
 void BrailleTextBox :: mouseReleaseEvent(QMouseEvent *event){
+    event->ignore();
+}
+
+void BrailleTextBox :: mouseDoubleClickEvent(QMouseEvent *event){
     event->ignore();
 }
 
