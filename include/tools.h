@@ -24,6 +24,14 @@ public:
     void useTool(QPointF point) override;
 };
 
+class Eraser : public Tool{
+public:
+    Eraser(BrailleCanvas* canvas);
+
+    void useTool(QPointF point) override;
+};
+
+
 class ToolManager{
 public:
     static ToolManager& getInstance();

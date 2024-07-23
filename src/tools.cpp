@@ -11,8 +11,16 @@ Pencil::Pencil(BrailleCanvas* canvas): Tool(canvas){}
 void Pencil::useTool(QPointF point){
     auto dot = new BrailleDot(canvas, point);
     dot->turnDotOn();
+    delete dot;
 }
 
+Eraser::Eraser(BrailleCanvas* canvas): Tool(canvas){}
+
+void Eraser::useTool(QPointF point){
+    auto dot = new BrailleDot(canvas, point);
+    dot->turnDotOff();
+    delete dot;
+}
 
 
 ToolManager& ToolManager::getInstance(){
@@ -49,6 +57,8 @@ Tool* ToolFactory::createTool(){
     Tool* tool;
     if (identifier == "actionPencil")
         tool = new Pencil(canvas);
+    else if (identifier == "actionEraser")
+        tool = new Eraser(canvas);
     return tool;
 }
 

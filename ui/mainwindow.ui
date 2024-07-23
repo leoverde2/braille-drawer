@@ -53,6 +53,7 @@
     <bool>false</bool>
    </attribute>
    <addaction name="actionPencil"/>
+   <addaction name="actionEraser"/>
   </widget>
   <action name="actionPencil">
    <property name="icon">
@@ -61,6 +62,18 @@
    </property>
    <property name="text">
     <string>Pencil</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionEraser">
+   <property name="icon">
+    <iconset>
+     <normaloff>../assets/eraser.png</normaloff>../assets/eraser.png</iconset>
+   </property>
+   <property name="text">
+    <string>actionEraser</string>
    </property>
    <property name="menuRole">
     <enum>QAction::MenuRole::NoRole</enum>
