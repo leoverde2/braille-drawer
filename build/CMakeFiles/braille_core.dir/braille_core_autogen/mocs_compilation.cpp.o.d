@@ -440,4 +440,12 @@ CMakeFiles/braille_core.dir/braille_core_autogen/mocs_compilation.cpp.o: \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/QMainWindow \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qmainwindow.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qtabwidget.h \
- /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qgraphicsscene.h
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qgraphicsscene.h \
+ /home/ubuntu/projects/braille-drawer/include/tools.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/QPointF \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qpoint.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/QObject \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qtoolbar.h \
+ /home/ubuntu/projects/braille-drawer/include/braille_canvas.h \
+ /home/ubuntu/projects/braille-drawer/build/braille_core_autogen/6YEA5652QU/moc_tools.cpp \
+ /home/ubuntu/projects/braille-drawer/build/braille_core_autogen/6YEA5652QU/../../../include/tools.h

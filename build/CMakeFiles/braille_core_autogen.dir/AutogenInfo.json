@@ -473,6 +473,12 @@
 			"MU",
 			"6YEA5652QU/moc_state.cpp",
 			null
+		],
+		[
+			"/home/ubuntu/projects/braille-drawer/include/tools.h",
+			"MU",
+			"6YEA5652QU/moc_tools.cpp",
+			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -552,7 +558,8 @@
 		],
 		[ "/home/ubuntu/projects/braille-drawer/src/main.cpp", "MU", null ],
 		[ "/home/ubuntu/projects/braille-drawer/src/mainwindow.cpp", "MU", null ],
-		[ "/home/ubuntu/projects/braille-drawer/src/state.cpp", "MU", null ]
+		[ "/home/ubuntu/projects/braille-drawer/src/state.cpp", "MU", null ],
+		[ "/home/ubuntu/projects/braille-drawer/src/tools.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [ "/home/ubuntu/projects/braille-drawer/ui" ],

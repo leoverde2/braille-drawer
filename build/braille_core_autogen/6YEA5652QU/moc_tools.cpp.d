@@ -1,5 +1,5 @@
-/home/ubuntu/projects/braille-drawer/build/braille-drawer_autogen/6YEA5652QU/moc_mainwindow.cpp: /home/ubuntu/projects/braille-drawer/include/mainwindow.h \
-  /home/ubuntu/projects/braille-drawer/build/braille-drawer_autogen/moc_predefs.h \
+/home/ubuntu/projects/braille-drawer/build/braille_core_autogen/6YEA5652QU/moc_tools.cpp: /home/ubuntu/projects/braille-drawer/include/tools.h \
+  /home/ubuntu/projects/braille-drawer/build/braille_core_autogen/moc_predefs.h \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/QList \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/QObject \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/QPointF \
@@ -181,7 +181,6 @@
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/QGraphicsProxyWidget \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/QGraphicsView \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/QLineEdit \
-  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/QMainWindow \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qabstractscrollarea.h \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qboxlayout.h \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qframe.h \
@@ -195,10 +194,8 @@
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qlayout.h \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qlayoutitem.h \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qlineedit.h \
-  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qmainwindow.h \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qscrollarea.h \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qsizepolicy.h \
-  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qtabwidget.h \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qtoolbar.h \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qtwidgets-config.h \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qtwidgetsexports.h \
@@ -206,7 +203,6 @@
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qwidget.h \
   /home/ubuntu/projects/braille-drawer/include/braille_canvas.h \
   /home/ubuntu/projects/braille-drawer/include/braille_text_box.h \
-  /home/ubuntu/projects/braille-drawer/include/tools.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \

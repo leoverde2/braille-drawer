@@ -369,16 +369,73 @@ CMakeFiles/braille-drawer.dir/src/main.cpp.o: \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qtabwidget.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qgraphicsscene.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qpen.h \
- /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/QApplication \
- /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qapplication.h \
- /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qcoreapplication.h \
+ /home/ubuntu/projects/braille-drawer/include/tools.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/QPointF \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qpoint.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/QObject \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qobject.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qtoolbar.h \
+ /home/ubuntu/projects/braille-drawer/include/braille_canvas.h \
+ /home/ubuntu/projects/braille-drawer/include/braille_text_box.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/QLineEdit \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qlineedit.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qframe.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qtextcursor.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qtextdocument.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qurl.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qtextformat.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qtextoption.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qevent.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qcoreevent.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qiodevice.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qeventpoint.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qvector2d.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qvectornd.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qpointingdevice.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qinputdevice.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qscreen.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/QList \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qlist.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/QObject \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/QRect \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qrect.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/QSize \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qsize.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/QSizeF \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/QTransform \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qtransform.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qnativeinterface.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qscreen_platform.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qguiapplication.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qcoreapplication.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qdeadlinetimer.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qelapsedtimer.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qeventloop.h \
- /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qnativeinterface.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qcoreapplication_platform.h \
- /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qguiapplication.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qinputmethod.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qlocale.h \
- /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qguiapplication_platform.h
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qguiapplication_platform.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qwidget.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/QGraphicsProxyWidget \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qgraphicsproxywidget.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qgraphicswidget.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qgraphicslayoutitem.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qevent.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qgraphicsitem.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qpainterpath.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/QGraphicsView \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qgraphicsview.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qpainter.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qscrollarea.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qgraphicsscene.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qgridlayout.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qlayout.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qlayoutitem.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qboxlayout.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qgridlayout.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qpoint.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/QVector \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qvector.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/QApplication \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qapplication.h

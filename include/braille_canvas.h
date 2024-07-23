@@ -25,6 +25,8 @@ public:
 
     void stateTrackerSetter(StateTracker* state_tracker);
 
+    void drawBrailleAt(const QPointF &pos);
+
 protected:
     void mousePressEvent(QMouseEvent *event) override;
     void mouseMoveEvent(QMouseEvent *event) override;
@@ -41,7 +43,6 @@ private:
     QGraphicsScene* graphicsScene;
     QGraphicsView* graphicsView;
 
-    void drawBrailleAt(const QPointF &pos);
     BrailleTextBox* getTextBoxAt(const QPointF &pos);
     void applyZoom(qreal factor, const QPoint &cursorPos);
 

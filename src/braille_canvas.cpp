@@ -15,6 +15,7 @@
 #include "braille_text_box.h"
 #include "braille_view.h"
 #include <state.h>
+#include "tools.h"
 
 BrailleCanvas::BrailleCanvas(QWidget *parent) : QWidget(parent), isDrawing(false){
     setFixedSize(800, 600);
@@ -91,14 +92,14 @@ void BrailleCanvas::mousePressEvent(QMouseEvent *event){
     if (event->button() == Qt::LeftButton){
         isDrawing = true;
         QPointF scenePos = graphicsView->mapToScene(event->pos());
-        drawBrailleAt(scenePos);
+        ToolManager::getInstance().useCurrentTool(scenePos);
     }
 }
 
 void BrailleCanvas::mouseMoveEvent(QMouseEvent *event){
     if (isDrawing){
         QPointF scenePos = graphicsView->mapToScene(event->pos());
-        drawBrailleAt(scenePos);
+        ToolManager::getInstance().useCurrentTool(scenePos);
     }
 }
 

@@ -483,4 +483,7 @@ CMakeFiles/braille_core.dir/src/braille_canvas.cpp.o: \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/QPointF \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qpoint.h \
  /usr/include/c++/11/any \
- /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qlist.h
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qlist.h \
+ /home/ubuntu/projects/braille-drawer/include/tools.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/QObject \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qtoolbar.h

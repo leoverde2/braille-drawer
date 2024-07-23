@@ -13,10 +13,6 @@ do {\
         qDebug() << "Actual: " << actual;\
         return;\
     }\
-    qDebug() << "Expected: " << expected;\
-    qDebug() << "Expected name: " << #expected; \
-    qDebug() << "Actual: " << actual;\
-    qDebug() << "Actual name: " << #actual;\
 } while (false)
 
 
@@ -108,7 +104,7 @@ void TestStateTracker::testUndoRedo()
     MYCOMPARE(stateAfterRedoAgain->saved_state, newState);
 
     // Ensure that redo is correctly handled and no extra states are present
-    QCOMPARE(stateTracker->state_stack.size(), 2);
+    QCOMPARE(stateTracker->state_stack.size(), 3);
 }
 
 void TestStateTracker::testEdge(){

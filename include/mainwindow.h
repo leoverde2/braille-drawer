@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <qgraphicsscene.h>
+#include <tools.h>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -21,5 +22,6 @@ public:
 private:
     Ui::MainWindow *ui;
     QGraphicsScene *scene;
+    ToolFactory* toolFactory;
 };
 #endif // MAINWINDOW_H

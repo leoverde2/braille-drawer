@@ -31,6 +31,7 @@ class StateTracker{
     #endif
 public:
     StateTracker();
+    ~StateTracker();
 
     void undo();
     void redo();
@@ -41,7 +42,7 @@ private:
     QVector<State*> state_stack;
 
     State* getCurrentState();
-    void debug(State* state);
+    void debug();
 };
 
 #endif
