@@ -1,6 +1,13 @@
 cmake_minimum_required(VERSION 3.5)
 
+enable_testing()
+option(BUILD_TESTING "Build the testing tree." ON)
+
 project(braille-drawer VERSION 0.1 LANGUAGES CXX)
+
+if (NOT DEFINED CTEST_OUTPUT_ON_FAILURE)
+    set(CTEST_OUTPUT_ON_FAILURE 1)
+endif()
 
 if(NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE Debug)
@@ -38,12 +45,48 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -g")
 
+add_library(braille_core STATIC ${CPP_SOURCES})
+target_include_directories(braille_core PUBLIC
+    ${CMAKE_CURRENT_SOURCE_DIR}/src
+    ${CMAKE_CURRENT_SOURCE_DIR}/include
+)
+target_link_libraries(braille_core PUBLIC Qt${QT_VERSION_MAJOR}::Widgets)
+
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(braille-drawer
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
     )
+
+
+if(BUILD_TESTING)
+    find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Test)
+
+    file(GLOB_RECURSE TEST_SOURCES ${CMAKE_SOURCE_DIR}/tests/*.cpp)
+
+    add_executable(statetracker_test ${TEST_SOURCES})
+
+    target_link_libraries(statetracker_test
+        PRIVATE
+        Qt${QT_VERSION_MAJOR}::Widgets
+        Qt${QT_VERSION_MAJOR}::Test
+        braille_core
+    )
+
+    target_include_directories(statetracker_test
+        PRIVATE
+        ${CMAKE_CURRENT_SOURCE_DIR}/src
+        ${CMAKE_CURRENT_SOURCE_DIR}/include
+    )
+
+    add_test(NAME StateTrackerTest COMMAND statetracker_test)
+endif()
+
+
+
+
+
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET braille-drawer APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
 #                 ${CMAKE_CURRENT_SOURCE_DIR}/android)

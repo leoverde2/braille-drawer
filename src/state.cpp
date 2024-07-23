@@ -3,7 +3,7 @@
 #include <QDebug>
 
 StateTracker::StateTracker()
-    :stack_index(0){
+:stack_index(-1){
 }
 
 void StateTracker::undo(){
@@ -21,11 +21,13 @@ void StateTracker::redo(){
 }
 
 void StateTracker::push(State* state){
-    if (stack_index < state_stack.size() - 1)
-        state_stack.erase(state_stack.begin() + stack_index, state_stack.end());
-    state_stack.append(state);
     stack_index ++;
+    if (stack_index >= state_stack.size())
+        state_stack.resize(stack_index + 1);
+    state_stack[stack_index] = state;
 }
+
+
 
 CanvasState::CanvasState(BrailleCanvas* current_canvas, QList<QString> saved_state)
     : canvas(current_canvas), 

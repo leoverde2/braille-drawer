@@ -1,6 +1,6 @@
 #ifndef STATE_H
 #define STATE_H
-
+#include <QStack>
 #include "braille_canvas.h"
 #include <QPointF>
 #include <QVector>
@@ -26,6 +26,9 @@ public:
 
 
 class StateTracker{
+    #ifdef TESTING
+    friend class TestStateTracker;
+    #endif
 public:
     StateTracker();
 
@@ -36,6 +39,9 @@ public:
 private:
     int stack_index = 0;
     QVector<State*> state_stack;
+
+    State* getCurrentState();
+    void debug(State* state);
 };
 
 #endif

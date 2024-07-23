@@ -89,8 +89,6 @@ void BrailleCanvas::wheelEvent(QWheelEvent *event){
 
 void BrailleCanvas::mousePressEvent(QMouseEvent *event){
     if (event->button() == Qt::LeftButton){
-        CanvasState* saved = new CanvasState(this, getState());
-        state_tracker->push(saved);
         isDrawing = true;
         QPointF scenePos = graphicsView->mapToScene(event->pos());
         drawBrailleAt(scenePos);
@@ -106,6 +104,8 @@ void BrailleCanvas::mouseMoveEvent(QMouseEvent *event){
 
 void BrailleCanvas::mouseReleaseEvent(QMouseEvent *event){
     if (event->button() == Qt::LeftButton){
+        CanvasState* saved = new CanvasState(this, getState());
+        state_tracker->push(saved);
         isDrawing = false;
     }
 }
@@ -157,6 +157,8 @@ void BrailleCanvas::createGrid(){
             graphicsScene->addItem(proxy);
         }
     }    
+    CanvasState* saved = new CanvasState(this, getState());
+    state_tracker->push(saved); // i think the problem is that the state pointer is getting +1 here
 }
 
 BrailleTextBox* BrailleCanvas::getTextBoxAt(const QPointF &pos){

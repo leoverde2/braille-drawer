@@ -1,9 +1,0 @@
-/home/ubuntu/projects/braille-drawer/build/Desktop_Qt_6_7_2-Debug/CMakeFiles/braille-drawer.dir
-/home/ubuntu/projects/braille-drawer/build/Desktop_Qt_6_7_2-Debug/CMakeFiles/edit_cache.dir
-/home/ubuntu/projects/braille-drawer/build/Desktop_Qt_6_7_2-Debug/CMakeFiles/rebuild_cache.dir
-/home/ubuntu/projects/braille-drawer/build/Desktop_Qt_6_7_2-Debug/CMakeFiles/list_install_components.dir
-/home/ubuntu/projects/braille-drawer/build/Desktop_Qt_6_7_2-Debug/CMakeFiles/install.dir
-/home/ubuntu/projects/braille-drawer/build/Desktop_Qt_6_7_2-Debug/CMakeFiles/install/local.dir
-/home/ubuntu/projects/braille-drawer/build/Desktop_Qt_6_7_2-Debug/CMakeFiles/install/strip.dir
-/home/ubuntu/projects/braille-drawer/build/Desktop_Qt_6_7_2-Debug/CMakeFiles/braille-drawer_autogen_timestamp_deps.dir
-/home/ubuntu/projects/braille-drawer/build/Desktop_Qt_6_7_2-Debug/CMakeFiles/braille-drawer_autogen.dir

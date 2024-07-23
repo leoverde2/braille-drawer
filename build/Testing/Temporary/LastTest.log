@@ -1,0 +1,70 @@
+Start testing: Jul 22 22:44 -03
+----------------------------------------------------------
+1/1 Testing: StateTrackerTest
+1/1 Test: StateTrackerTest
+Command: "/home/ubuntu/projects/braille-drawer/build/statetracker_test"
+Directory: /home/ubuntu/projects/braille-drawer/build
+"StateTrackerTest" start time: Jul 22 22:44 -03
+Output:
+----------------------------------------------------------
+********* Start testing of TestStateTracker *********
+Config: Using QtTest library 6.7.2, Qt 6.7.2 (x86_64-little_endian-lp64 shared (dynamic) release build; by GCC 10.3.1 20210422 (Red Hat 10.3.1-1)), ubuntu 22.04
+PASS   : TestStateTracker::initTestCase()
+QDEBUG : TestStateTracker::testUndo() Expected:  QList("A", "B", "F")
+QDEBUG : TestStateTracker::testUndo() Expected name:  second
+QDEBUG : TestStateTracker::testUndo() Actual:  QList("A", "B", "F")
+QDEBUG : TestStateTracker::testUndo() Actual name:  state->saved_state
+QDEBUG : TestStateTracker::testUndo() Expected:  QList("A", "B", "C", "D")
+QDEBUG : TestStateTracker::testUndo() Expected name:  first
+QDEBUG : TestStateTracker::testUndo() Actual:  QList("A", "B", "C", "D")
+QDEBUG : TestStateTracker::testUndo() Actual name:  state2->saved_state
+QDEBUG : TestStateTracker::testUndo() Expected:  QList("A", "B", "1", "2")
+QDEBUG : TestStateTracker::testUndo() Expected name:  sixth
+QDEBUG : TestStateTracker::testUndo() Actual:  QList("A", "B", "1", "2")
+QDEBUG : TestStateTracker::testUndo() Actual name:  state3->saved_state
+PASS   : TestStateTracker::testUndo()
+QDEBUG : TestStateTracker::testUndoRedo() Expected:  QList("A", "B", "D")
+QDEBUG : TestStateTracker::testUndoRedo() Expected name:  state2
+QDEBUG : TestStateTracker::testUndoRedo() Actual:  QList("A", "B", "D")
+QDEBUG : TestStateTracker::testUndoRedo() Actual name:  stateAfterUndo1->saved_state
+QDEBUG : TestStateTracker::testUndoRedo() Expected:  QList("A", "B", "C")
+QDEBUG : TestStateTracker::testUndoRedo() Expected name:  state1
+QDEBUG : TestStateTracker::testUndoRedo() Actual:  QList("A", "B", "C")
+QDEBUG : TestStateTracker::testUndoRedo() Actual name:  stateAfterUndo2->saved_state
+QDEBUG : TestStateTracker::testUndoRedo() Expected:  QList("A", "B")
+QDEBUG : TestStateTracker::testUndoRedo() Expected name:  initialState
+QDEBUG : TestStateTracker::testUndoRedo() Actual:  QList("A", "B")
+QDEBUG : TestStateTracker::testUndoRedo() Actual name:  stateAfterUndo3->saved_state
+QDEBUG : TestStateTracker::testUndoRedo() Expected:  QList("A", "B", "F")
+QDEBUG : TestStateTracker::testUndoRedo() Expected name:  newState
+QDEBUG : TestStateTracker::testUndoRedo() Actual:  QList("A", "B", "F")
+QDEBUG : TestStateTracker::testUndoRedo() Actual name:  stateAfterPush->saved_state
+QDEBUG : TestStateTracker::testUndoRedo() Expected:  QList("A", "B", "F")
+QDEBUG : TestStateTracker::testUndoRedo() Expected name:  newState
+QDEBUG : TestStateTracker::testUndoRedo() Actual:  QList("A", "B", "F")
+QDEBUG : TestStateTracker::testUndoRedo() Actual name:  stateAfterRedo->saved_state
+QDEBUG : TestStateTracker::testUndoRedo() Expected:  QList("A", "B", "F")
+QDEBUG : TestStateTracker::testUndoRedo() Expected name:  newState
+QDEBUG : TestStateTracker::testUndoRedo() Actual:  QList("A", "B", "F")
+QDEBUG : TestStateTracker::testUndoRedo() Actual name:  stateAfterRedoAgain->saved_state
+FAIL!  : TestStateTracker::testUndoRedo() Compared values are not the same
+   Actual   (stateTracker->state_stack.size()): 5
+   Expected (2)                               : 2
+   Loc: [/home/ubuntu/projects/braille-drawer/tests/test_state_tracker.cpp(111)]
+QDEBUG : TestStateTracker::testEdge() Expected:  QList("A", "B", "C", "D")
+QDEBUG : TestStateTracker::testEdge() Expected name:  first
+QDEBUG : TestStateTracker::testEdge() Actual:  QList("A", "B", "C", "D")
+QDEBUG : TestStateTracker::testEdge() Actual name:  state->saved_state
+PASS   : TestStateTracker::testEdge()
+PASS   : TestStateTracker::cleanupTestCase()
+Totals: 4 passed, 1 failed, 0 skipped, 0 blacklisted, 1356ms
+********* Finished testing of TestStateTracker *********
+<end of output>
+Test time =   1.37 sec
+----------------------------------------------------------
+Test Failed.
+"StateTrackerTest" end time: Jul 22 22:44 -03
+"StateTrackerTest" time elapsed: 00:00:01
+----------------------------------------------------------
+
+End testing: Jul 22 22:44 -03

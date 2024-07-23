@@ -442,6 +442,7 @@ CMakeFiles/braille-drawer.dir/src/braille_canvas.cpp.o: \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/QVector \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qvector.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qgraphicsitem.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qgraphicsproxywidget.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qgraphicsscene.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qgraphicsview.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/QMouseEvent \
@@ -476,6 +477,8 @@ CMakeFiles/braille-drawer.dir/src/braille_canvas.cpp.o: \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/QGraphicsScene \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qgraphicsscene.h \
  /home/ubuntu/projects/braille-drawer/include/state.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/QStack \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qstack.h \
  /home/ubuntu/projects/braille-drawer/include/braille_canvas.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/QPointF \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qpoint.h \

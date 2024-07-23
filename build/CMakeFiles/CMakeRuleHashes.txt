@@ -1,2 +1,4 @@
 # Hashes of file build rules.
 60cecb6d4cec2d069ecb1c5186a87f4c CMakeFiles/braille-drawer_autogen
+2bcacfe481b108955de49eebf210cd7b CMakeFiles/braille_core_autogen
+91800e3c5b173e5e63c37e448858b3e2 CMakeFiles/statetracker_test_autogen
