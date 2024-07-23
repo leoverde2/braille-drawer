@@ -13,6 +13,7 @@ public:
     virtual void useTool(QPointF point) = 0;
 
 protected:
+    //function that is shared among tools but can be overriden if needed to get the dots that need to be painted based on the current width
     BrailleCanvas* canvas;
 };
 

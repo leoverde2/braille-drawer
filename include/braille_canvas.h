@@ -11,6 +11,7 @@
 
 class StateTracker;
 
+
 class BrailleCanvas : public QWidget{
     Q_OBJECT
 
@@ -18,6 +19,7 @@ public:
     explicit BrailleCanvas(QWidget *parent = nullptr);
     void createGrid();
     void clearAllText();
+    BrailleTextBox* getTextBoxAt(const QPointF &pos);
 
     void setFontSize(int size);
     QList<QString> getState();
@@ -42,11 +44,11 @@ private:
 
     QGraphicsScene* graphicsScene;
     QGraphicsView* graphicsView;
-
-    BrailleTextBox* getTextBoxAt(const QPointF &pos);
     void applyZoom(qreal factor, const QPoint &cursorPos);
+
 
     StateTracker* state_tracker;
 };
+
 
 #endif

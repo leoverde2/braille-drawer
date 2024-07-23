@@ -451,6 +451,12 @@
 			null
 		],
 		[
+			"/home/ubuntu/projects/braille-drawer/include/braille_dot.h",
+			"MU",
+			"6YEA5652QU/moc_braille_dot.cpp",
+			null
+		],
+		[
 			"/home/ubuntu/projects/braille-drawer/include/braille_text_box.h",
 			"MU",
 			"6YEA5652QU/moc_braille_text_box.cpp",
@@ -546,6 +552,11 @@
 	[
 		[
 			"/home/ubuntu/projects/braille-drawer/src/braille_canvas.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/ubuntu/projects/braille-drawer/src/braille_dot.cpp",
 			"MU",
 			null
 		],

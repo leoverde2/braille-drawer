@@ -435,4 +435,5 @@ CMakeFiles/braille_core.dir/src/tools.cpp.o: \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qaction.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/QAction \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qaction.h \
- /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qlogging.h
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qlogging.h \
+ /home/ubuntu/projects/braille-drawer/include/braille_dot.h

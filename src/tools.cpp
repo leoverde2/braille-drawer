@@ -2,13 +2,15 @@
 #include <qaction.h>
 #include <qlogging.h>
 #include <qtoolbar.h>
+#include "braille_dot.h"
 
 Tool::Tool(BrailleCanvas* canvas): canvas(canvas){}
 
 Pencil::Pencil(BrailleCanvas* canvas): Tool(canvas){}
 
 void Pencil::useTool(QPointF point){
-    canvas->drawBrailleAt(point);
+    auto dot = new BrailleDot(canvas, point);
+    dot->turnDotOn();
 }
 
 

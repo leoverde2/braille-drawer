@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/ubuntu/projects/braille-drawer/build/braille_core_autogen/mocs_compilation.cpp" "CMakeFiles/braille_core.dir/braille_core_autogen/mocs_compilation.cpp.o" "gcc" "CMakeFiles/braille_core.dir/braille_core_autogen/mocs_compilation.cpp.o.d"
   "/home/ubuntu/projects/braille-drawer/src/braille_canvas.cpp" "CMakeFiles/braille_core.dir/src/braille_canvas.cpp.o" "gcc" "CMakeFiles/braille_core.dir/src/braille_canvas.cpp.o.d"
+  "/home/ubuntu/projects/braille-drawer/src/braille_dot.cpp" "CMakeFiles/braille_core.dir/src/braille_dot.cpp.o" "gcc" "CMakeFiles/braille_core.dir/src/braille_dot.cpp.o.d"
   "/home/ubuntu/projects/braille-drawer/src/braille_text_box.cpp" "CMakeFiles/braille_core.dir/src/braille_text_box.cpp.o" "gcc" "CMakeFiles/braille_core.dir/src/braille_text_box.cpp.o.d"
   "/home/ubuntu/projects/braille-drawer/src/braille_view.cpp" "CMakeFiles/braille_core.dir/src/braille_view.cpp.o" "gcc" "CMakeFiles/braille_core.dir/src/braille_view.cpp.o.d"
   "/home/ubuntu/projects/braille-drawer/src/main.cpp" "CMakeFiles/braille_core.dir/src/main.cpp.o" "gcc" "CMakeFiles/braille_core.dir/src/main.cpp.o.d"
