@@ -19,8 +19,6 @@
 
 BrailleCanvas::BrailleCanvas(QWidget *parent) : QWidget(parent), isDrawing(false){
     setFixedSize(800, 600);
-    setAttribute(Qt::WA_TranslucentBackground);
-    setAutoFillBackground(false);
 
     int fontId = QFontDatabase::addApplicationFont("/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf");
     if (fontId != -1) {
@@ -40,9 +38,6 @@ BrailleCanvas::BrailleCanvas(QWidget *parent) : QWidget(parent), isDrawing(false
     graphicsView = new BrailleView(graphicsScene, this);
     graphicsView->setGeometry(rect());
     graphicsView->setRenderHint(QPainter::Antialiasing);
-    graphicsView->setAttribute(Qt::WA_OpaquePaintEvent);
-    graphicsView->setStyleSheet("background: transparent");
-    graphicsView->viewport()->setStyleSheet("background-color: transparent");
     graphicsView->viewport()->setAutoFillBackground(false);
     graphicsView->setViewportUpdateMode(QGraphicsView::FullViewportUpdate);
 
