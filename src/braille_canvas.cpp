@@ -19,6 +19,8 @@
 
 BrailleCanvas::BrailleCanvas(QWidget *parent) : QWidget(parent), isDrawing(false){
     setFixedSize(800, 600);
+    setAttribute(Qt::WA_TranslucentBackground);
+    setAutoFillBackground(false);
 
     int fontId = QFontDatabase::addApplicationFont("/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf");
     if (fontId != -1) {
@@ -34,11 +36,23 @@ BrailleCanvas::BrailleCanvas(QWidget *parent) : QWidget(parent), isDrawing(false
 
 
     graphicsScene = new QGraphicsScene(this);
+    createCheckerboardBackground();
     graphicsView = new BrailleView(graphicsScene, this);
     graphicsView->setGeometry(rect());
     graphicsView->setRenderHint(QPainter::Antialiasing);
+    graphicsView->setAttribute(Qt::WA_OpaquePaintEvent);
+    graphicsView->setStyleSheet("background: transparent");
+    graphicsView->viewport()->setStyleSheet("background-color: transparent");
+    graphicsView->viewport()->setAutoFillBackground(false);
+    graphicsView->setViewportUpdateMode(QGraphicsView::FullViewportUpdate);
 
 
+}
+
+void BrailleCanvas::paintEvent(QPaintEvent *event){
+    QPainter painter(this);
+    painter.fillRect(rect(), graphicsScene->backgroundBrush());
+    QWidget::paintEvent(event);
 }
 
 void BrailleCanvas::stateTrackerSetter(StateTracker *tracker){
@@ -155,7 +169,7 @@ void BrailleCanvas::createGrid(){
 
             box->setFixedSize(font_width, font_height);
             box->setFont(brailleFont);
-            box->setStyleSheet(QString("font-size: %1px").arg(12));
+            box->setStyleSheet(QString("font-size: %1px; background-color: transparent").arg(12));
 
             proxy->setGeometry(QRect(j * font_width, i * font_height, font_width, font_height));
             graphicsScene->addItem(proxy);
@@ -163,6 +177,17 @@ void BrailleCanvas::createGrid(){
     }    
     CanvasState* saved = new CanvasState(this, getState());
     state_tracker->push(saved); // i think the problem is that the state pointer is getting +1 here
+}
+
+void BrailleCanvas::createCheckerboardBackground(){
+    QPixmap checkerboard(16, 16);
+    QPainter painter(&checkerboard);
+    painter.fillRect(0, 0, 8, 8, Qt::lightGray);
+    painter.fillRect(8, 0, 8, 8, Qt::white);
+    painter.fillRect(0, 8, 8, 8, Qt::white);
+    painter.fillRect(8, 8, 8, 8, Qt::lightGray);
+    QBrush brush(checkerboard);
+    graphicsScene->setBackgroundBrush(brush);
 }
 
 BrailleTextBox* BrailleCanvas::getTextBoxAt(const QPointF &pos){

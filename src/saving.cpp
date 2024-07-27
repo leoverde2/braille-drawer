@@ -7,6 +7,7 @@
 #include <QFileDialog>
 #include <QPixmap>
 #include <QPainter>
+#include "braille_text_box.h"
 
 void saveSceneAsImage(QGraphicsScene *scene, QWidget *parent) {
     QString fileName = QFileDialog::getSaveFileName(parent, "Save Image", "", "Images (*.png)");
@@ -27,6 +28,34 @@ void saveSceneAsImage(QGraphicsScene *scene, QWidget *parent) {
     pixmap.save(&file, "PNG");
 
     file.close();
+}
+
+void saveSceneAsTransparentImage(QGraphicsScene* scene, QWidget *parent){
+    QString fileName = QFileDialog::getSaveFileName(parent, "Save Transparent Image", "", "Images (*.png)");
+    if (fileName.isEmpty())
+        return;
+
+    QSize size = scene->sceneRect().size().toSize();
+    QImage image(size, QImage::Format_ARGB32);
+    image.fill(Qt::transparent);
+
+    QPainter painter(&image);
+    painter.setRenderHint(QPainter::Antialiasing);
+
+    for (QGraphicsItem* item : scene->items()) {
+        if (BrailleTextProxy* proxy = dynamic_cast<BrailleTextProxy*>(item)) {
+            if (BrailleTextBox* box = dynamic_cast<BrailleTextBox*>(proxy->widget())) {
+                // Render only the text content
+                QPointF pos = proxy->scenePos();
+                painter.setFont(box->font());
+                painter.drawText(QRectF(pos, box->size()), box->text());
+            }
+        }
+    }
+
+    painter.end();
+
+    image.save(fileName, "PNG");
 }
 
 

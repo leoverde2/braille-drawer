@@ -46,10 +46,12 @@ private:
 
     QGraphicsScene* graphicsScene;
     QGraphicsView* graphicsView;
-    void applyZoom(qreal factor, const QPoint &cursorPos);
-
 
     StateTracker* state_tracker;
+
+    void applyZoom(qreal factor, const QPoint &cursorPos);
+    void createCheckerboardBackground();
+    void paintEvent(QPaintEvent* event) override;
 };
 
 

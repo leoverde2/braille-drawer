@@ -12,6 +12,8 @@ BrailleTextBox :: BrailleTextBox(QWidget *parent) : QLineEdit(parent){
     setCursor(Qt::ArrowCursor);
     setFrame(false);
     setStyleSheet("QLineEdit { background: transparent }");
+    setAttribute(Qt::WA_TranslucentBackground);
+    setAutoFillBackground(false);
 }
 
 void BrailleTextBox :: mousePressEvent(QMouseEvent *event){

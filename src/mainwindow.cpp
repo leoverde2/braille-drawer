@@ -19,7 +19,7 @@ MainWindow::MainWindow(QWidget *parent)
     canvas->createGrid();
     QObject::connect(ui->actionSave, &QAction::triggered, this, [this](){
         QGraphicsScene *scene = ui->centralwidget->getScene();
-        saveSceneAsImage(scene, this);
+        saveSceneAsTransparentImage(scene, this);
     });
 }
 
