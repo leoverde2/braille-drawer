@@ -3,6 +3,7 @@
 #include <qlogging.h>
 #include <qtoolbar.h>
 #include "braille_dot.h"
+#include <stdexcept>
 
 Tool::Tool(BrailleCanvas* canvas): canvas(canvas){}
 
@@ -53,12 +54,13 @@ ToolFactory::ToolFactory(BrailleCanvas* canvas, QObject* parent)
 Tool* ToolFactory::createTool(){
     QAction* action = qobject_cast<QAction*>(sender());
     QString identifier = action->objectName();
-    ToolManager tool_manager = ToolManager::getInstance();
     Tool* tool;
     if (identifier == "actionPencil")
         tool = new Pencil(canvas);
     else if (identifier == "actionEraser")
         tool = new Eraser(canvas);
+    else
+        throw std::invalid_argument("Invalid tool identifier: " + identifier.toStdString());
     return tool;
 }
 

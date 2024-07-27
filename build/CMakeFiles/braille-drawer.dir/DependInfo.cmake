@@ -15,6 +15,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/ubuntu/projects/braille-drawer/src/braille_view.cpp" "CMakeFiles/braille-drawer.dir/src/braille_view.cpp.o" "gcc" "CMakeFiles/braille-drawer.dir/src/braille_view.cpp.o.d"
   "/home/ubuntu/projects/braille-drawer/src/main.cpp" "CMakeFiles/braille-drawer.dir/src/main.cpp.o" "gcc" "CMakeFiles/braille-drawer.dir/src/main.cpp.o.d"
   "/home/ubuntu/projects/braille-drawer/src/mainwindow.cpp" "CMakeFiles/braille-drawer.dir/src/mainwindow.cpp.o" "gcc" "CMakeFiles/braille-drawer.dir/src/mainwindow.cpp.o.d"
+  "/home/ubuntu/projects/braille-drawer/src/saving.cpp" "CMakeFiles/braille-drawer.dir/src/saving.cpp.o" "gcc" "CMakeFiles/braille-drawer.dir/src/saving.cpp.o.d"
   "/home/ubuntu/projects/braille-drawer/src/state.cpp" "CMakeFiles/braille-drawer.dir/src/state.cpp.o" "gcc" "CMakeFiles/braille-drawer.dir/src/state.cpp.o.d"
   "/home/ubuntu/projects/braille-drawer/src/tools.cpp" "CMakeFiles/braille-drawer.dir/src/tools.cpp.o" "gcc" "CMakeFiles/braille-drawer.dir/src/tools.cpp.o.d"
   )

@@ -45,6 +45,9 @@ void BrailleCanvas::stateTrackerSetter(StateTracker *tracker){
     state_tracker = tracker;
 }
 
+QGraphicsScene* BrailleCanvas::getScene(){
+    return graphicsScene;
+}
 
 void BrailleCanvas::applyZoom(qreal factor, const QPoint &cursorPos){
     QPointF targetScenePos = graphicsView->mapToScene(cursorPos);

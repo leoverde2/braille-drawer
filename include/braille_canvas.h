@@ -29,6 +29,8 @@ public:
 
     void drawBrailleAt(const QPointF &pos);
 
+    QGraphicsScene* getScene();
+
 protected:
     void mousePressEvent(QMouseEvent *event) override;
     void mouseMoveEvent(QMouseEvent *event) override;

@@ -445,6 +445,8 @@ CMakeFiles/braille_core.dir/src/mainwindow.cpp.o: \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/QApplication \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qapplication.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/QMainWindow \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/QMenu \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qmenu.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/QMenuBar \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qmenubar.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qmenu.h \
@@ -461,4 +463,6 @@ CMakeFiles/braille_core.dir/src/mainwindow.cpp.o: \
  /usr/include/c++/11/any \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qgraphicsitem.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qlist.h \
- /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/QAction
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/QAction \
+ /home/ubuntu/projects/braille-drawer/include/saving.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qmainwindow.h

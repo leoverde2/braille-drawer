@@ -3,6 +3,7 @@
 #include "braille_canvas.h"
 #include "state.h"
 #include <QAction>
+#include "saving.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -16,6 +17,10 @@ MainWindow::MainWindow(QWidget *parent)
 
     canvas->stateTrackerSetter(stateTracker);
     canvas->createGrid();
+    QObject::connect(ui->actionSave, &QAction::triggered, this, [this](){
+        QGraphicsScene *scene = ui->centralwidget->getScene();
+        saveSceneAsImage(scene, this);
+    });
 }
 
 MainWindow::~MainWindow()

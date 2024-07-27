@@ -16,6 +16,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/braille_core.dir/src/main.cpp.o.d"
   "CMakeFiles/braille_core.dir/src/mainwindow.cpp.o"
   "CMakeFiles/braille_core.dir/src/mainwindow.cpp.o.d"
+  "CMakeFiles/braille_core.dir/src/saving.cpp.o"
+  "CMakeFiles/braille_core.dir/src/saving.cpp.o.d"
   "CMakeFiles/braille_core.dir/src/state.cpp.o"
   "CMakeFiles/braille_core.dir/src/state.cpp.o.d"
   "CMakeFiles/braille_core.dir/src/tools.cpp.o"

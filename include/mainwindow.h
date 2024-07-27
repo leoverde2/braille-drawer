@@ -23,5 +23,6 @@ private:
     Ui::MainWindow *ui;
     QGraphicsScene *scene;
     ToolFactory* toolFactory;
+    QRectF canvasInfo;
 };
 #endif // MAINWINDOW_H
