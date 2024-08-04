@@ -464,5 +464,26 @@ CMakeFiles/braille-drawer.dir/src/mainwindow.cpp.o: \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qgraphicsitem.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qlist.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/QAction \
- /home/ubuntu/projects/braille-drawer/include/saving.h \
- /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qmainwindow.h
+ /home/ubuntu/projects/braille-drawer/include/file.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qmainwindow.h \
+ /home/ubuntu/projects/braille-drawer/include/image_menu.h \
+ /home/ubuntu/projects/braille-drawer/build/braille-drawer_autogen/include/ui_resize.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/QAbstractButton \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qabstractbutton.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/QDialog \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qdialog.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/QDialogButtonBox \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qdialogbuttonbox.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/QFormLayout \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qformlayout.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/QLayout \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qlayout.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/QGridLayout \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qgridlayout.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/QHBoxLayout \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/QLabel \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qlabel.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qpicture.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/QLineEdit \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/QWidget \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qwidget.h

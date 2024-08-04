@@ -504,7 +504,9 @@
 	"MOC_SKIP" : 
 	[
 		"/home/ubuntu/projects/braille-drawer/build/braille-drawer_autogen/include/ui/ui_mainwindow.h",
-		"/home/ubuntu/projects/braille-drawer/build/braille_core_autogen/include/ui/ui_mainwindow.h"
+		"/home/ubuntu/projects/braille-drawer/build/braille-drawer_autogen/include/ui/ui_resize.h",
+		"/home/ubuntu/projects/braille-drawer/build/braille_core_autogen/include/ui/ui_mainwindow.h",
+		"/home/ubuntu/projects/braille-drawer/build/braille_core_autogen/include/ui/ui_resize.h"
 	],
 	"MULTI_CONFIG" : false,
 	"PARALLEL" : 8,
@@ -527,7 +529,9 @@
 	"UIC_SKIP" : 
 	[
 		"/home/ubuntu/projects/braille-drawer/build/braille-drawer_autogen/include/ui/ui_mainwindow.h",
-		"/home/ubuntu/projects/braille-drawer/build/braille_core_autogen/include/ui/ui_mainwindow.h"
+		"/home/ubuntu/projects/braille-drawer/build/braille-drawer_autogen/include/ui/ui_resize.h",
+		"/home/ubuntu/projects/braille-drawer/build/braille_core_autogen/include/ui/ui_mainwindow.h",
+		"/home/ubuntu/projects/braille-drawer/build/braille_core_autogen/include/ui/ui_resize.h"
 	],
 	"UIC_UI_FILES" : [],
 	"VERBOSITY" : 0

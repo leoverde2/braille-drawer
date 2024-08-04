@@ -17,8 +17,9 @@
 #include <state.h>
 #include "tools.h"
 
-BrailleCanvas::BrailleCanvas(QWidget *parent) : QWidget(parent), isDrawing(false){
+BrailleCanvas::BrailleCanvas(QWidget *parent) : QWidget(parent), isDrawing(false), borderItem(new QGraphicsRectItem()){
     setFixedSize(800, 600);
+    setFocusPolicy(Qt::StrongFocus);
 
     int fontId = QFontDatabase::addApplicationFont("/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf");
     if (fontId != -1) {
@@ -33,8 +34,16 @@ BrailleCanvas::BrailleCanvas(QWidget *parent) : QWidget(parent), isDrawing(false
     }
 
 
+    borderItem->setRect(0, 0, 800, 600);
     graphicsScene = new QGraphicsScene(this);
-    createCheckerboardBackground();
+    QRectF sceneRect(0, 0, 800, 600);
+    graphicsScene->setSceneRect(sceneRect);
+    QPen borderPen(Qt::black);
+    borderPen.setWidth(2);
+    borderItem->setPen(borderPen);
+    graphicsScene->addItem(borderItem);
+
+
     graphicsView = new BrailleView(graphicsScene, this);
     graphicsView->setGeometry(rect());
     graphicsView->setRenderHint(QPainter::Antialiasing);
@@ -43,6 +52,11 @@ BrailleCanvas::BrailleCanvas(QWidget *parent) : QWidget(parent), isDrawing(false
 
 
 }
+
+void BrailleCanvas::changeBorderSize(QRectF rect){
+    borderItem->setRect(rect);
+}
+
 
 void BrailleCanvas::paintEvent(QPaintEvent *event){
     QPainter painter(this);
@@ -72,6 +86,7 @@ void BrailleCanvas::applyZoom(qreal factor, const QPoint &cursorPos){
 
 }
 
+//change to use the map defined in the header
 QList<QString> BrailleCanvas::getState(){
     QList<QString> text_list;
     for(auto *item : graphicsScene->items()){
@@ -153,8 +168,8 @@ void BrailleCanvas::createGrid(){
     int font_width = fm.horizontalAdvance(QChar(0x2800));
     int font_height = fm.height();
 
-    cols = width() / font_width;
-    rows = height() / font_height;
+    cols = graphicsScene->width() / font_width;
+    rows = graphicsScene->height() / font_height;
 
     for (int i = 0; i < rows; ++i){
         for (int j = 0; j < cols; ++j){
@@ -171,7 +186,20 @@ void BrailleCanvas::createGrid(){
         }
     }    
     CanvasState* saved = new CanvasState(this, getState());
-    state_tracker->push(saved); // i think the problem is that the state pointer is getting +1 here
+    state_tracker->push(saved);
+}
+
+void BrailleCanvas::resizeGrid(int new_width, int new_height){
+    QFontMetrics fm(brailleFont);
+    int font_width = fm.horizontalAdvance(QChar(0x2800));
+    int font_height = fm.height();
+
+    auto old_cols = cols;
+    auto old_rows = rows;
+
+    auto new_cols = new_width / font_width;
+    auto new_rows = new_height / font_height;
+
 }
 
 void BrailleCanvas::createCheckerboardBackground(){

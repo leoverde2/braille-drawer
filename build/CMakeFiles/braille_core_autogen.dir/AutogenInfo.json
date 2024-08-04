@@ -469,15 +469,21 @@
 			null
 		],
 		[
-			"/home/ubuntu/projects/braille-drawer/include/mainwindow.h",
+			"/home/ubuntu/projects/braille-drawer/include/file.h",
 			"MU",
-			"6YEA5652QU/moc_mainwindow.cpp",
+			"6YEA5652QU/moc_file.cpp",
 			null
 		],
 		[
-			"/home/ubuntu/projects/braille-drawer/include/saving.h",
+			"/home/ubuntu/projects/braille-drawer/include/image_menu.h",
 			"MU",
-			"6YEA5652QU/moc_saving.cpp",
+			"6YEA5652QU/moc_image_menu.cpp",
+			null
+		],
+		[
+			"/home/ubuntu/projects/braille-drawer/include/mainwindow.h",
+			"MU",
+			"6YEA5652QU/moc_mainwindow.cpp",
 			null
 		],
 		[
@@ -573,9 +579,10 @@
 			"MU",
 			null
 		],
+		[ "/home/ubuntu/projects/braille-drawer/src/file.cpp", "MU", null ],
+		[ "/home/ubuntu/projects/braille-drawer/src/image_menu.cpp", "MU", null ],
 		[ "/home/ubuntu/projects/braille-drawer/src/main.cpp", "MU", null ],
 		[ "/home/ubuntu/projects/braille-drawer/src/mainwindow.cpp", "MU", null ],
-		[ "/home/ubuntu/projects/braille-drawer/src/saving.cpp", "MU", null ],
 		[ "/home/ubuntu/projects/braille-drawer/src/state.cpp", "MU", null ],
 		[ "/home/ubuntu/projects/braille-drawer/src/tools.cpp", "MU", null ]
 	],

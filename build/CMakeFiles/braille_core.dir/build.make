@@ -139,10 +139,38 @@ CMakeFiles/braille_core.dir/src/braille_view.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/braille_core.dir/src/braille_view.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/projects/braille-drawer/src/braille_view.cpp -o CMakeFiles/braille_core.dir/src/braille_view.cpp.s
 
+CMakeFiles/braille_core.dir/src/file.cpp.o: CMakeFiles/braille_core.dir/flags.make
+CMakeFiles/braille_core.dir/src/file.cpp.o: ../src/file.cpp
+CMakeFiles/braille_core.dir/src/file.cpp.o: CMakeFiles/braille_core.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/projects/braille-drawer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/braille_core.dir/src/file.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/braille_core.dir/src/file.cpp.o -MF CMakeFiles/braille_core.dir/src/file.cpp.o.d -o CMakeFiles/braille_core.dir/src/file.cpp.o -c /home/ubuntu/projects/braille-drawer/src/file.cpp
+
+CMakeFiles/braille_core.dir/src/file.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/braille_core.dir/src/file.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/projects/braille-drawer/src/file.cpp > CMakeFiles/braille_core.dir/src/file.cpp.i
+
+CMakeFiles/braille_core.dir/src/file.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/braille_core.dir/src/file.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/projects/braille-drawer/src/file.cpp -o CMakeFiles/braille_core.dir/src/file.cpp.s
+
+CMakeFiles/braille_core.dir/src/image_menu.cpp.o: CMakeFiles/braille_core.dir/flags.make
+CMakeFiles/braille_core.dir/src/image_menu.cpp.o: ../src/image_menu.cpp
+CMakeFiles/braille_core.dir/src/image_menu.cpp.o: CMakeFiles/braille_core.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/projects/braille-drawer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/braille_core.dir/src/image_menu.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/braille_core.dir/src/image_menu.cpp.o -MF CMakeFiles/braille_core.dir/src/image_menu.cpp.o.d -o CMakeFiles/braille_core.dir/src/image_menu.cpp.o -c /home/ubuntu/projects/braille-drawer/src/image_menu.cpp
+
+CMakeFiles/braille_core.dir/src/image_menu.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/braille_core.dir/src/image_menu.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/projects/braille-drawer/src/image_menu.cpp > CMakeFiles/braille_core.dir/src/image_menu.cpp.i
+
+CMakeFiles/braille_core.dir/src/image_menu.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/braille_core.dir/src/image_menu.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/projects/braille-drawer/src/image_menu.cpp -o CMakeFiles/braille_core.dir/src/image_menu.cpp.s
+
 CMakeFiles/braille_core.dir/src/main.cpp.o: CMakeFiles/braille_core.dir/flags.make
 CMakeFiles/braille_core.dir/src/main.cpp.o: ../src/main.cpp
 CMakeFiles/braille_core.dir/src/main.cpp.o: CMakeFiles/braille_core.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/projects/braille-drawer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/braille_core.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/projects/braille-drawer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/braille_core.dir/src/main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/braille_core.dir/src/main.cpp.o -MF CMakeFiles/braille_core.dir/src/main.cpp.o.d -o CMakeFiles/braille_core.dir/src/main.cpp.o -c /home/ubuntu/projects/braille-drawer/src/main.cpp
 
 CMakeFiles/braille_core.dir/src/main.cpp.i: cmake_force
@@ -156,7 +184,7 @@ CMakeFiles/braille_core.dir/src/main.cpp.s: cmake_force
 CMakeFiles/braille_core.dir/src/mainwindow.cpp.o: CMakeFiles/braille_core.dir/flags.make
 CMakeFiles/braille_core.dir/src/mainwindow.cpp.o: ../src/mainwindow.cpp
 CMakeFiles/braille_core.dir/src/mainwindow.cpp.o: CMakeFiles/braille_core.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/projects/braille-drawer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/braille_core.dir/src/mainwindow.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/projects/braille-drawer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/braille_core.dir/src/mainwindow.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/braille_core.dir/src/mainwindow.cpp.o -MF CMakeFiles/braille_core.dir/src/mainwindow.cpp.o.d -o CMakeFiles/braille_core.dir/src/mainwindow.cpp.o -c /home/ubuntu/projects/braille-drawer/src/mainwindow.cpp
 
 CMakeFiles/braille_core.dir/src/mainwindow.cpp.i: cmake_force
@@ -167,24 +195,10 @@ CMakeFiles/braille_core.dir/src/mainwindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/braille_core.dir/src/mainwindow.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/projects/braille-drawer/src/mainwindow.cpp -o CMakeFiles/braille_core.dir/src/mainwindow.cpp.s
 
-CMakeFiles/braille_core.dir/src/saving.cpp.o: CMakeFiles/braille_core.dir/flags.make
-CMakeFiles/braille_core.dir/src/saving.cpp.o: ../src/saving.cpp
-CMakeFiles/braille_core.dir/src/saving.cpp.o: CMakeFiles/braille_core.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/projects/braille-drawer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/braille_core.dir/src/saving.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/braille_core.dir/src/saving.cpp.o -MF CMakeFiles/braille_core.dir/src/saving.cpp.o.d -o CMakeFiles/braille_core.dir/src/saving.cpp.o -c /home/ubuntu/projects/braille-drawer/src/saving.cpp
-
-CMakeFiles/braille_core.dir/src/saving.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/braille_core.dir/src/saving.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/projects/braille-drawer/src/saving.cpp > CMakeFiles/braille_core.dir/src/saving.cpp.i
-
-CMakeFiles/braille_core.dir/src/saving.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/braille_core.dir/src/saving.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/projects/braille-drawer/src/saving.cpp -o CMakeFiles/braille_core.dir/src/saving.cpp.s
-
 CMakeFiles/braille_core.dir/src/state.cpp.o: CMakeFiles/braille_core.dir/flags.make
 CMakeFiles/braille_core.dir/src/state.cpp.o: ../src/state.cpp
 CMakeFiles/braille_core.dir/src/state.cpp.o: CMakeFiles/braille_core.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/projects/braille-drawer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/braille_core.dir/src/state.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/projects/braille-drawer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/braille_core.dir/src/state.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/braille_core.dir/src/state.cpp.o -MF CMakeFiles/braille_core.dir/src/state.cpp.o.d -o CMakeFiles/braille_core.dir/src/state.cpp.o -c /home/ubuntu/projects/braille-drawer/src/state.cpp
 
 CMakeFiles/braille_core.dir/src/state.cpp.i: cmake_force
@@ -198,7 +212,7 @@ CMakeFiles/braille_core.dir/src/state.cpp.s: cmake_force
 CMakeFiles/braille_core.dir/src/tools.cpp.o: CMakeFiles/braille_core.dir/flags.make
 CMakeFiles/braille_core.dir/src/tools.cpp.o: ../src/tools.cpp
 CMakeFiles/braille_core.dir/src/tools.cpp.o: CMakeFiles/braille_core.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/projects/braille-drawer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/braille_core.dir/src/tools.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/projects/braille-drawer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/braille_core.dir/src/tools.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/braille_core.dir/src/tools.cpp.o -MF CMakeFiles/braille_core.dir/src/tools.cpp.o.d -o CMakeFiles/braille_core.dir/src/tools.cpp.o -c /home/ubuntu/projects/braille-drawer/src/tools.cpp
 
 CMakeFiles/braille_core.dir/src/tools.cpp.i: cmake_force
@@ -216,9 +230,10 @@ braille_core_OBJECTS = \
 "CMakeFiles/braille_core.dir/src/braille_dot.cpp.o" \
 "CMakeFiles/braille_core.dir/src/braille_text_box.cpp.o" \
 "CMakeFiles/braille_core.dir/src/braille_view.cpp.o" \
+"CMakeFiles/braille_core.dir/src/file.cpp.o" \
+"CMakeFiles/braille_core.dir/src/image_menu.cpp.o" \
 "CMakeFiles/braille_core.dir/src/main.cpp.o" \
 "CMakeFiles/braille_core.dir/src/mainwindow.cpp.o" \
-"CMakeFiles/braille_core.dir/src/saving.cpp.o" \
 "CMakeFiles/braille_core.dir/src/state.cpp.o" \
 "CMakeFiles/braille_core.dir/src/tools.cpp.o"
 
@@ -230,14 +245,15 @@ libbraille_core.a: CMakeFiles/braille_core.dir/src/braille_canvas.cpp.o
 libbraille_core.a: CMakeFiles/braille_core.dir/src/braille_dot.cpp.o
 libbraille_core.a: CMakeFiles/braille_core.dir/src/braille_text_box.cpp.o
 libbraille_core.a: CMakeFiles/braille_core.dir/src/braille_view.cpp.o
+libbraille_core.a: CMakeFiles/braille_core.dir/src/file.cpp.o
+libbraille_core.a: CMakeFiles/braille_core.dir/src/image_menu.cpp.o
 libbraille_core.a: CMakeFiles/braille_core.dir/src/main.cpp.o
 libbraille_core.a: CMakeFiles/braille_core.dir/src/mainwindow.cpp.o
-libbraille_core.a: CMakeFiles/braille_core.dir/src/saving.cpp.o
 libbraille_core.a: CMakeFiles/braille_core.dir/src/state.cpp.o
 libbraille_core.a: CMakeFiles/braille_core.dir/src/tools.cpp.o
 libbraille_core.a: CMakeFiles/braille_core.dir/build.make
 libbraille_core.a: CMakeFiles/braille_core.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ubuntu/projects/braille-drawer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX static library libbraille_core.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ubuntu/projects/braille-drawer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX static library libbraille_core.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/braille_core.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/braille_core.dir/link.txt --verbose=$(VERBOSE)
 

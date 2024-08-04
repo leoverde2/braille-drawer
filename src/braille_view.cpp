@@ -1,6 +1,7 @@
 #include "braille_view.h"
 #include <QMouseEvent>
 #include <QGraphicsScene>
+#include <qlogging.h>
 
 
 BrailleView::BrailleView(QGraphicsScene *scene, QWidget *parent)
@@ -18,6 +19,10 @@ void BrailleView::mouseMoveEvent(QMouseEvent *event){
 }
 
 void BrailleView::mouseReleaseEvent(QMouseEvent *event){
+    event->ignore();
+}
+
+void BrailleView::keyPressEvent(QKeyEvent *event){
     event->ignore();
 }
 

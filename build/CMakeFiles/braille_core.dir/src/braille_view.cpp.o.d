@@ -408,4 +408,5 @@ CMakeFiles/braille_core.dir/src/braille_view.cpp.o: \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qcoreapplication_platform.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qinputmethod.h \
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qlocale.h \
- /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qguiapplication_platform.h
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtGui/qguiapplication_platform.h \
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qlogging.h

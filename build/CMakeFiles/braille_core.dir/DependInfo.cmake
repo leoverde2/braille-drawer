@@ -13,9 +13,10 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/ubuntu/projects/braille-drawer/src/braille_dot.cpp" "CMakeFiles/braille_core.dir/src/braille_dot.cpp.o" "gcc" "CMakeFiles/braille_core.dir/src/braille_dot.cpp.o.d"
   "/home/ubuntu/projects/braille-drawer/src/braille_text_box.cpp" "CMakeFiles/braille_core.dir/src/braille_text_box.cpp.o" "gcc" "CMakeFiles/braille_core.dir/src/braille_text_box.cpp.o.d"
   "/home/ubuntu/projects/braille-drawer/src/braille_view.cpp" "CMakeFiles/braille_core.dir/src/braille_view.cpp.o" "gcc" "CMakeFiles/braille_core.dir/src/braille_view.cpp.o.d"
+  "/home/ubuntu/projects/braille-drawer/src/file.cpp" "CMakeFiles/braille_core.dir/src/file.cpp.o" "gcc" "CMakeFiles/braille_core.dir/src/file.cpp.o.d"
+  "/home/ubuntu/projects/braille-drawer/src/image_menu.cpp" "CMakeFiles/braille_core.dir/src/image_menu.cpp.o" "gcc" "CMakeFiles/braille_core.dir/src/image_menu.cpp.o.d"
   "/home/ubuntu/projects/braille-drawer/src/main.cpp" "CMakeFiles/braille_core.dir/src/main.cpp.o" "gcc" "CMakeFiles/braille_core.dir/src/main.cpp.o.d"
   "/home/ubuntu/projects/braille-drawer/src/mainwindow.cpp" "CMakeFiles/braille_core.dir/src/mainwindow.cpp.o" "gcc" "CMakeFiles/braille_core.dir/src/mainwindow.cpp.o.d"
-  "/home/ubuntu/projects/braille-drawer/src/saving.cpp" "CMakeFiles/braille_core.dir/src/saving.cpp.o" "gcc" "CMakeFiles/braille_core.dir/src/saving.cpp.o.d"
   "/home/ubuntu/projects/braille-drawer/src/state.cpp" "CMakeFiles/braille_core.dir/src/state.cpp.o" "gcc" "CMakeFiles/braille_core.dir/src/state.cpp.o.d"
   "/home/ubuntu/projects/braille-drawer/src/tools.cpp" "CMakeFiles/braille_core.dir/src/tools.cpp.o" "gcc" "CMakeFiles/braille_core.dir/src/tools.cpp.o.d"
   )

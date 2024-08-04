@@ -3,7 +3,9 @@
 #include "braille_canvas.h"
 #include "state.h"
 #include <QAction>
-#include "saving.h"
+#include "file.h"
+#include "image_menu.h"
+#include "ui_resize.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -17,9 +19,18 @@ MainWindow::MainWindow(QWidget *parent)
 
     canvas->stateTrackerSetter(stateTracker);
     canvas->createGrid();
+
     QObject::connect(ui->actionSave, &QAction::triggered, this, [this](){
         QGraphicsScene *scene = ui->centralwidget->getScene();
-        saveSceneAsTransparentImage(scene, this);
+        exportSceneAsTransparentImage(scene, this);
+    });
+
+    QObject::connect(ui->actionResize, &QAction::triggered, this, [this](){ 
+        auto dialog = std::make_unique<QDialog>();
+        auto resize_ui = std::make_unique<Ui_Resize>();
+        resize_ui->setupUi(dialog.get());
+
+        ImageMenu::resize(ui->centralwidget, std::move(dialog), std::move(resize_ui));
     });
 }
 

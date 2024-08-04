@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/braille-drawer_autogen"
   "braille-drawer_autogen/include/ui/ui_mainwindow.h"
+  "braille-drawer_autogen/include/ui/ui_resize.h"
   "braille-drawer_autogen/mocs_compilation.cpp"
 )
 

@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/statetracker_test_autogen"
   "statetracker_test_autogen/include/ui/ui_mainwindow.h"
+  "statetracker_test_autogen/include/ui/ui_resize.h"
   "statetracker_test_autogen/mocs_compilation.cpp"
 )
 

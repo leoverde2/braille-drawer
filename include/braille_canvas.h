@@ -17,6 +17,8 @@ class BrailleCanvas : public QWidget{
 
 public:
     explicit BrailleCanvas(QWidget *parent = nullptr);
+    QMap<QGraphicsItem*, QPair<int, int>> gridMap;
+
     void createGrid();
     void clearAllText();
     BrailleTextBox* getTextBoxAt(const QPointF &pos);
@@ -27,9 +29,10 @@ public:
 
     void stateTrackerSetter(StateTracker* state_tracker);
 
-    void drawBrailleAt(const QPointF &pos);
 
+    void drawBrailleAt(const QPointF &pos);
     QGraphicsScene* getScene();
+    void resizeGrid(int new_width, int new_height);
 
 protected:
     void mousePressEvent(QMouseEvent *event) override;
@@ -43,6 +46,7 @@ private:
     int rows, cols;
     int fontSize;
     QFont brailleFont;
+    QGraphicsRectItem *borderItem; 
 
     QGraphicsScene* graphicsScene;
     QGraphicsView* graphicsView;
@@ -52,6 +56,7 @@ private:
     void applyZoom(qreal factor, const QPoint &cursorPos);
     void createCheckerboardBackground();
     void paintEvent(QPaintEvent* event) override;
+    void changeBorderSize(QRectF rect);
 };
 
 
