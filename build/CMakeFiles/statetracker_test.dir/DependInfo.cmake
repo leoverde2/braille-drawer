@@ -9,7 +9,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/ubuntu/projects/braille-drawer/build/statetracker_test_autogen/mocs_compilation.cpp" "CMakeFiles/statetracker_test.dir/statetracker_test_autogen/mocs_compilation.cpp.o" "gcc" "CMakeFiles/statetracker_test.dir/statetracker_test_autogen/mocs_compilation.cpp.o.d"
-  "/home/ubuntu/projects/braille-drawer/tests/test_state_tracker.cpp" "CMakeFiles/statetracker_test.dir/tests/test_state_tracker.cpp.o" "gcc" "CMakeFiles/statetracker_test.dir/tests/test_state_tracker.cpp.o.d"
   )
 
 # Targets to which this target links.

@@ -86,24 +86,27 @@ void BrailleCanvas::applyZoom(qreal factor, const QPoint &cursorPos){
 
 }
 
-//change to use the map defined in the header
-QList<QString> BrailleCanvas::getState(){
-    QList<QString> text_list;
+QList<QList<QString>> BrailleCanvas::getState(){
+    QList<QList<QString>> text_list(rows, QList<QString>(cols));
     for(auto *item : graphicsScene->items()){
         if (BrailleTextProxy *proxy = dynamic_cast<BrailleTextProxy*>(item)) {
             if (BrailleTextBox *box = dynamic_cast<BrailleTextBox*>(proxy->widget()))
-                text_list.append(box->text());
+                text_list[proxy->row][proxy->col] = box->text();
         }
     }
     return text_list;
 }
 
-void BrailleCanvas::setState(QList<QString> strings){
-    QList<QGraphicsItem*> items = graphicsScene->items(); 
-    for (auto i = 0; i < strings.size(); ++i){
-        if (auto proxy = dynamic_cast<BrailleTextProxy*>(items[i])){
-            if (auto box = dynamic_cast<BrailleTextBox*>(proxy->widget())){
-                box->setText(strings[i]);
+void BrailleCanvas::setState(QList<QList<QString>> strings){
+    for (auto y = 0; y < strings.size(); ++y){
+        for (auto x = 0; x < strings[y].size(); ++x){
+            auto coord_y = y * fontHeight;
+            auto coord_x = x * fontWidth;
+            auto point = QPointF(coord_x, coord_y);
+            if (auto proxy = dynamic_cast<BrailleTextProxy*>(graphicsScene->itemAt(point, QTransform()))){
+                if (auto box = dynamic_cast<BrailleTextBox*>(proxy->widget())){
+                    box->setText(strings[y][x]);
+                }
             }
         }
     }
@@ -165,23 +168,23 @@ void BrailleCanvas::clearAllText(){
 
 void BrailleCanvas::createGrid(){
     QFontMetrics fm(brailleFont);
-    int font_width = fm.horizontalAdvance(QChar(0x2800));
-    int font_height = fm.height();
+    fontWidth = fm.horizontalAdvance(QChar(0x2800));
+    fontHeight = fm.height();
 
-    cols = graphicsScene->width() / font_width;
-    rows = graphicsScene->height() / font_height;
+    cols = graphicsScene->width() / fontWidth;
+    rows = graphicsScene->height() / fontHeight;
 
     for (int i = 0; i < rows; ++i){
         for (int j = 0; j < cols; ++j){
-            BrailleTextProxy *proxy = new BrailleTextProxy();
+            BrailleTextProxy *proxy = new BrailleTextProxy(i, j);
             BrailleTextBox *box = new BrailleTextBox();
             proxy->setWidget(box);
 
-            box->setFixedSize(font_width, font_height);
+            box->setFixedSize(fontWidth, fontHeight);
             box->setFont(brailleFont);
             box->setStyleSheet(QString("font-size: %1px; background-color: transparent").arg(12));
 
-            proxy->setGeometry(QRect(j * font_width, i * font_height, font_width, font_height));
+            proxy->setGeometry(QRect(j * fontWidth, i * fontHeight, fontWidth, fontHeight));
             graphicsScene->addItem(proxy);
         }
     }    

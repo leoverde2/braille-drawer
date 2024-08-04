@@ -4,8 +4,6 @@ file(REMOVE_RECURSE
   "statetracker_test_autogen"
   "CMakeFiles/statetracker_test.dir/statetracker_test_autogen/mocs_compilation.cpp.o"
   "CMakeFiles/statetracker_test.dir/statetracker_test_autogen/mocs_compilation.cpp.o.d"
-  "CMakeFiles/statetracker_test.dir/tests/test_state_tracker.cpp.o"
-  "CMakeFiles/statetracker_test.dir/tests/test_state_tracker.cpp.o.d"
   "statetracker_test"
   "statetracker_test.pdb"
 )

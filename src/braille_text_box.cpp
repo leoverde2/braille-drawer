@@ -2,8 +2,7 @@
 #include <qevent.h>
 #include <QGraphicsProxyWidget>
 
-BrailleTextProxy :: BrailleTextProxy(QGraphicsItem *parent) : QGraphicsProxyWidget(parent){
-} 
+BrailleTextProxy :: BrailleTextProxy(int row, int col, QGraphicsItem *parent) : QGraphicsProxyWidget(parent), row(row), col(col){} 
 
 BrailleTextBox :: BrailleTextBox(QWidget *parent) : QLineEdit(parent){
     setAlignment(Qt::AlignCenter);

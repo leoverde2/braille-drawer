@@ -33,24 +33,24 @@ void StateTracker::push(State* state){
     ++stack_index;
 }
 
-void StateTracker::debug(){
-    for (auto state : state_stack){
-        if (auto s = dynamic_cast<CanvasState*>(state)){
-            QString output;
-            for (const auto& str : s->saved_state){
-                output += str;
-            }
-            qDebug() << output;
-        }
-    }
-    qDebug() << "Index: " << stack_index; 
-    qDebug() << "Size: " << state_stack.size();
-    qDebug() << "END";
-}
+//void StateTracker::debug(){
+//    for (auto state : state_stack){
+//        if (auto s = dynamic_cast<CanvasState*>(state)){
+//            QString output;
+//            for (const auto& str : s->saved_state){
+//                output += str;
+//            }
+//            qDebug() << output;
+//        }
+//    }
+//    qDebug() << "Index: " << stack_index; 
+//    qDebug() << "Size: " << state_stack.size();
+//    qDebug() << "END";
+//}
 
 
 
-CanvasState::CanvasState(BrailleCanvas* current_canvas, QList<QString> saved_state)
+CanvasState::CanvasState(BrailleCanvas* current_canvas, QList<QList<QString>> saved_state)
     : canvas(current_canvas), 
     saved_state(saved_state){
 }

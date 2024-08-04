@@ -10,7 +10,10 @@ class BrailleTextProxy : public QGraphicsProxyWidget{
     Q_OBJECT
 
 public:
-    explicit BrailleTextProxy(QGraphicsItem *parent = nullptr);
+    explicit BrailleTextProxy(int row, int col, QGraphicsItem *parent = nullptr);
+    int row, col;
+
+private:
 }; 
 
 class BrailleTextBox : public QLineEdit {

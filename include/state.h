@@ -17,10 +17,10 @@ public:
 
 class CanvasState : public State{
 public:
-    CanvasState(BrailleCanvas* current_state, QList<QString>);
+    CanvasState(BrailleCanvas* canvas, QList<QList<QString>> current_state) ;
 
     BrailleCanvas* canvas;
-    QList<QString> saved_state;
+    QList<QList<QString>> saved_state;
     void load();
 };
 

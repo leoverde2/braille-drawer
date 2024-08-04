@@ -17,15 +17,14 @@ class BrailleCanvas : public QWidget{
 
 public:
     explicit BrailleCanvas(QWidget *parent = nullptr);
-    QMap<QGraphicsItem*, QPair<int, int>> gridMap;
 
     void createGrid();
     void clearAllText();
     BrailleTextBox* getTextBoxAt(const QPointF &pos);
 
     void setFontSize(int size);
-    QList<QString> getState();
-    void setState(QList<QString>);
+    QList<QList<QString>> getState();
+    void setState(QList<QList<QString>>);
 
     void stateTrackerSetter(StateTracker* state_tracker);
 
@@ -43,6 +42,7 @@ protected:
 
 private:
     bool isDrawing;
+    int fontWidth, fontHeight;
     int rows, cols;
     int fontSize;
     QFont brailleFont;

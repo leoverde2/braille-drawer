@@ -3502,7 +3502,9 @@ CMakeFiles/braille-drawer.dir/src/image_menu.cpp.o: ../src/image_menu.cpp \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/QVBoxLayout \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/QWidget \
   /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qwidget.h \
-  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qdialog.h
+  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qdialog.h \
+  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/QString \
+  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qstring.h
 
 CMakeFiles/braille-drawer.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/stdc-predef.h \
@@ -5540,6 +5542,8 @@ CMakeFiles/braille-drawer.dir/src/tools.cpp.o: ../src/tools.cpp \
 ../src/mainwindow.cpp:
 
 ../src/main.cpp:
+
+/home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/QString:
 
 /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/QVBoxLayout:
 

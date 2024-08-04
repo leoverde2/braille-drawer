@@ -3510,6 +3510,8 @@ CMakeFiles/braille-drawer.dir/src/image_menu.cpp.o
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/QWidget
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qwidget.h
  /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtWidgets/qdialog.h
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/QString
+ /home/ubuntu/opt/Qt/6.7.2/gcc_64/include/QtCore/qstring.h
 
 CMakeFiles/braille-drawer.dir/src/main.cpp.o
  /home/ubuntu/projects/braille-drawer/src/main.cpp
