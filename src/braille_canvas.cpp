@@ -17,7 +17,7 @@
 #include <state.h>
 #include "tools.h"
 
-BrailleCanvas::BrailleCanvas(QWidget *parent) : QWidget(parent), isDrawing(false), borderItem(new QGraphicsRectItem()){
+BrailleCanvas::BrailleCanvas(QWidget *parent) : QWidget(parent), isDrawing(false){
     setFixedSize(800, 600);
     setFocusPolicy(Qt::StrongFocus);
 
@@ -34,15 +34,17 @@ BrailleCanvas::BrailleCanvas(QWidget *parent) : QWidget(parent), isDrawing(false
     }
 
 
-    borderItem->setRect(0, 0, 800, 600);
     graphicsScene = new QGraphicsScene(this);
     QRectF sceneRect(0, 0, 800, 600);
     graphicsScene->setSceneRect(sceneRect);
+
+
+    borderItem = new QGraphicsRectItem();
+    borderItem->setRect(graphicsScene->sceneRect());
     QPen borderPen(Qt::black);
     borderPen.setWidth(2);
     borderItem->setPen(borderPen);
     graphicsScene->addItem(borderItem);
-
 
     graphicsView = new BrailleView(graphicsScene, this);
     graphicsView->setGeometry(rect());
@@ -51,6 +53,13 @@ BrailleCanvas::BrailleCanvas(QWidget *parent) : QWidget(parent), isDrawing(false
     graphicsView->setViewportUpdateMode(QGraphicsView::FullViewportUpdate);
 
 
+
+    QFontMetrics fm(brailleFont);
+    fontWidth = fm.horizontalAdvance(QChar(0x2800));
+    fontHeight = fm.height();
+
+    cols = graphicsScene->width() / fontWidth;
+    rows = graphicsScene->height() / fontHeight;
 }
 
 void BrailleCanvas::changeBorderSize(QRectF rect){
@@ -167,13 +176,6 @@ void BrailleCanvas::clearAllText(){
 }
 
 void BrailleCanvas::createGrid(){
-    QFontMetrics fm(brailleFont);
-    fontWidth = fm.horizontalAdvance(QChar(0x2800));
-    fontHeight = fm.height();
-
-    cols = graphicsScene->width() / fontWidth;
-    rows = graphicsScene->height() / fontHeight;
-
     for (int i = 0; i < rows; ++i){
         for (int j = 0; j < cols; ++j){
             BrailleTextProxy *proxy = new BrailleTextProxy(i, j);
@@ -192,17 +194,51 @@ void BrailleCanvas::createGrid(){
     state_tracker->push(saved);
 }
 
-void BrailleCanvas::resizeGrid(int new_width, int new_height){
-    QFontMetrics fm(brailleFont);
-    int font_width = fm.horizontalAdvance(QChar(0x2800));
-    int font_height = fm.height();
+void BrailleCanvas::resizeGrid(int newWidth, int newHeight){
+    cols = newWidth / fontWidth;
+    rows = newHeight / fontHeight;
 
-    auto old_cols = cols;
-    auto old_rows = rows;
+    this->setUpdatesEnabled(false);
 
-    auto new_cols = new_width / font_width;
-    auto new_rows = new_height / font_height;
+    graphicsScene->setSceneRect(0, 0, newWidth, newHeight);
+    borderItem->setRect(graphicsScene->sceneRect());
 
+
+    for (int y = 0; y < rows; ++y){
+        for(int x = 0; x < cols; ++x){
+            QPointF point(x * fontWidth, y * fontHeight);
+            BrailleTextProxy *proxy = dynamic_cast<BrailleTextProxy*>(graphicsScene->itemAt(point, QTransform()));
+
+            if (!proxy){
+                proxy = new BrailleTextProxy(y, x);
+                BrailleTextBox *box = new BrailleTextBox();
+                proxy->setWidget(box);
+                box->setFixedSize(fontWidth, fontHeight);
+                box->setFont(brailleFont);
+                box->setStyleSheet(QString("font-size: %1px; background-color: transparent").arg(12));
+                graphicsScene->addItem(proxy);
+            }
+            auto rect = QRect(x * fontWidth, y * fontHeight, fontWidth, fontHeight);
+            proxy->setGeometry(rect);
+        }
+    }
+
+    for (QGraphicsItem* item : graphicsScene->items()) {
+        if (item != borderItem) {
+            BrailleTextProxy* proxy = dynamic_cast<BrailleTextProxy*>(item);
+            if (proxy) {
+                if (proxy->row >= rows || proxy->col >= cols) {
+                    graphicsScene->removeItem(item);
+                    delete item;
+                }
+            }
+        }
+    }
+
+
+    this->setUpdatesEnabled(true);
+    this->repaint();
+    graphicsView->viewport()->repaint();
 }
 
 void BrailleCanvas::createCheckerboardBackground(){
